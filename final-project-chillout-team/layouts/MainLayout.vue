@@ -56,9 +56,9 @@
     <div id="MainHeader" class="flex items-center w-full bg-white">
       <div class="flex lg:justify-start justify-between gap-10 max-w-[1150px] w-full px-3 py-5 mx-auto">
         <NuxtLink to="/" class="min-w-[170px]">
-          <img width="170" src="/SmartShopping-logo2.jpg" />
+          <img width="130" src="/SmartShopping-logo2.jpg" />
         </NuxtLink>
-        <div class="max-w-[700px] w-full md:block hidden">
+        <div id="search-bar" class="max-w-[700px] w-full md:block hidden my-auto">
           <div class="relative">
             <div class="flex items-center border-2 border-[#FF4646] rounded-md w-full">
               <input
