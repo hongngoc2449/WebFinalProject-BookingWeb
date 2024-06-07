@@ -1,10 +1,10 @@
 # WebFinalProject-BookingWeb
-[LOGIN TAB](WireFrame/Login%20-%20Email.png)
+[LOGIN TAB](WireFrame/LoginEmail.png)
 - Sign In
 - Forget Password
-- Sign in by Other Media(Facebook,Gmail)
+- Sign in by Other Media(Facebook, Gmail)
 
-[HOME PAGE - Header](WireFrame/Header%20copy.png)
+[HOME PAGE - Header](WireFrame//Header.png)
 - Logo
 - Search bar
 - Account avatar
@@ -12,7 +12,7 @@
 - Advertisement slide
 
 
-[HOME PAGE - Products](WireFrame/Trang%20chủ.png)
+[HOME PAGE - Products](WireFrame/ProductList.png)
 - Product Image
 - Product name
 - Product star review + Sold amount
@@ -24,7 +24,9 @@
 - Help list
 - Contact list
 
-[PORDUCT PAGE](WireFrame/Product%2001.png)
+[PORDUCT PAGE 1](WireFrame/ProductDetail1.png)
+
+[PORDUCT PAGE 2](WireFrame/ProductDetail2.png)
 - Product images
 - Name
 - Prize
@@ -40,9 +42,16 @@
 - Checkout Button
 - Payment method
 
-[ADDRESS](WireFrame/Checkout%20-%20Address.png)
-
-[PAYMENT](WireFrame/Checkout%20-%20Payment.png)
-
-
-[SHIPPING](WireFrame/Checkout%20-%20Shipping.png)
+[ADDRESS](WireFrame/CheckoutAddress.png)
+- Address
+- Products and Prize
+- Place order button
+- Payment options
+- Total money
+  
+[PAYMENT](WireFrame/CheckoutPayment.png)
+- Payment details
+- Save payment option
+  
+[SHIPPING](WireFrame/CheckoutShipping.png)
+- Delivery options
