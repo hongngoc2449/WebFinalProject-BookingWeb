@@ -12,7 +12,6 @@
 
 <script setup>
 import MainLayout from "~/layouts/MainLayout.vue";
-/* create const products array where are fake data contain product object including keys: id, title, description, url, price: */
 const products = [
   {
     id: 1,
