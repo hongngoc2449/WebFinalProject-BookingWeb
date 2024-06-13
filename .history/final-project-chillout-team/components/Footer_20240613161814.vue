@@ -4,8 +4,7 @@
       <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
           <a href="#" class="flex items-center">
-            <img src="/logo.png" class="h-16 me-3" alt="SmartShopping Logo" />
-            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Team</span>
+            <img width="50" src="/logo.png" class="h-16 me-3" alt="SmartShopping Logo" />
           </a>
         </div>
         <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
