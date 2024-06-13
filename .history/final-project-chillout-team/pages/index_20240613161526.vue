@@ -3,7 +3,7 @@
     <div id="IndexPage" class="mt-4 max-w-[1200px] mx-auto px-2">
       <div class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 grid-cols-4 gap-4">
         <div v-if="products" v-for="product in products" :key="product">
-          <ProductComponent3 :product="product" />
+          <ProductComponent2 :product="product" />
         </div>
       </div>
     </div>

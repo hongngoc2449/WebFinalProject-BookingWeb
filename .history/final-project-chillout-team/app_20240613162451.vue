@@ -34,7 +34,10 @@ watch(
   }
 );
 
-  watch(() => route.fullPath, () => {
-    userStore.isLoading = false
-  })
+watch(
+  () => route.fullPath,
+  () => {
+    userStore.isLoading = false;
+  }
+);
 </script>
