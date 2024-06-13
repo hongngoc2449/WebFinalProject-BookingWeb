@@ -21,60 +21,73 @@
                         </div>
                     </div>
                 </div>
-                <div class="md:w-[60%] bg-white p-3 rounded-lg">
-                    <div v-if= "true">
-                        <p class = "mb-2">Title (by Data)</p>
-                        <p class = "font-light text-[12px] mb-2">Description Section (by Data)</p>
-                    </div>
 
-                    <div class="flex items-center pt-1.5">
-                        <span class="h-4 min-w-4 rounded-full p-0.5 bg-[#FFD000] mr-2">
-                            <Icon name="material-symbols:star-rounded" class="-mt-[17px]" size="12"/>
-                        </span>
-                        <p class="text-[#FF5353]">Extra 5% off</p>
-                    </div>
+                <div class="md:w-[60%] bg-white p-6 rounded-lg shadow-md">
 
-                    <div class="flex items-center justify-start my-2">
-                        <Icon name="ic:baseline-star" color="#FF5353"/>
-                        <Icon name="ic:baseline-star" color="#FF5353"/>
-                        <Icon name="ic:baseline-star" color="#FF5353"/>
-                        <Icon name="ic:baseline-star" color="#FF5353"/>
-                        <Icon name="ic:baseline-star" color="#FF5353"/>
-                        <span class="text-[13px] font-light ml-2">5 213 Reviews 1,000+ orders</span>
-                    </div>
-
-                    <div class="flex items-center justify-start gap-2 my-2">
-                        <div class="text-xl font-bold">$ {{ priceComputed }}</div>
-                        <span class="bg-[#F5F5F5] border text-[#C08562] text-[9px] font-semibold px-1.5 rounded-sm">70% off</span>
-                    </div>
-
-                    <p class="text-[#009A66] text-xs font-semibold pt-1">
-                        Free 11-day delivery over ￡8.28
+                <div>
+                    <p class="text-xl font-semibold text-gray-800 mb-2">Laptop</p>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+                        The [Brand Name] [Model Name] laptop features a 15.6-inch Full HD IPS display, powered by an Intel Core i7-1165G7 or AMD Ryzen 7 5800H processor, with integrated Intel Iris Xe or AMD Radeon graphics and optional NVIDIA GeForce GTX 1650/RTX 3060. It includes 16GB RAM (expandable to 32GB) and a 512GB/1TB SSD, running Windows 11 Home/Pro. The device boasts a sleek aluminum chassis, weighing 1.75 kg, and offers extensive connectivity options, including USB 3.2, USB-C, HDMI 2.0, Wi-Fi 6, and Bluetooth 5.1. Additional features are a backlit keyboard, precision touchpad, fingerprint reader, stereo speakers with Dolby Atmos, 720p HD webcam, and up to 10-hour battery life. Priced starting at $999, it comes with a 1-year warranty, extendable to 3 years.
                     </p>
-
-                    <p class="text-[#009A66] text-xs font-semibold pt-1">
-                        Free Shipping
-                    </p>
-
-                    <button 
-                        @click="addToCart()"
-                        :disabled="isInCart"
-                        class="
-                            px-6 
-                            py-2 
-                            rounded-lg 
-                            text-white 
-                            text-lg 
-                            font-semibold 
-                            bg-gradient-to-r 
-                            from-[#FF851A] 
-                            to-[#FFAC2C]
-                        "
-                    >
-                        <div v-if="isInCart">Is Added</div>
-                        <div v-else>Add to Cart</div>
-                    </button>
                 </div>
+
+                <div class="flex items-center py-2">
+                    <span class="flex items-center justify-center w-5 h-5 rounded-full bg-yellow-400 mr-2">
+                        <Icon name="material-symbols:star-rounded" class="text-white" size="12"/>
+                    </span>
+                    <p class="text-red-500 font-semibold text-sm">Extra 5% off</p>
+                </div>
+
+                <div class="flex items-center my-2">
+                    <Icon name="ic:baseline-star" color="#FF5353" size="20"/>
+                    <Icon name="ic:baseline-star" color="#FF5353" size="20"/>
+                    <Icon name="ic:baseline-star" color="#FF5353" size="20"/>
+                    <Icon name="ic:baseline-star" color="#FF5353" size="20"/>
+                    <Icon name="ic:baseline-star" color="#FF5353" size="20"/>
+                    <span class="text-sm text-gray-600 font-light ml-2">5 213 Reviews · 1,000+ orders</span>
+                </div>
+
+                <div class="flex items-center my-2">
+                    <div class="text-2xl font-bold text-gray-800">$ {{ priceComputed }}</div>
+                    <span class="bg-gray-100 border border-gray-300 text-orange-500 text-xs font-semibold px-2 py-1 rounded-sm ml-3">70% off</span>
+                </div>
+
+                <p class="text-green-600 text-xs font-semibold my-1">
+                    Free 11-day delivery over ￡8.28
+                </p>
+
+                <p class="text-green-600 text-xs font-semibold my-1">
+                    Free Shipping
+                </p>
+
+                <p style="color: rgb(255, 255, 255);">This text is white too.</p>
+
+                <button 
+                    @click="addToCart()"
+                    :disabled="isInCart"
+                    class="
+                        mt-4
+                        w-full
+                        px-6 
+                        py-3 
+                        rounded-lg 
+                        text-white 
+                        text-lg 
+                        font-semibold 
+                        bg-gradient-to-r 
+                        from-orange-500 
+                        to-yellow-500
+                        transition-transform
+                        transform
+                        hover:scale-105
+                        disabled:opacity-50
+                    "
+                >
+                    <div v-if="isInCart">Is Added</div>
+                    <div v-else>Add to Cart</div>
+                </button>
+                </div>
+
             </div>
         </div>
     </MainLayout>
