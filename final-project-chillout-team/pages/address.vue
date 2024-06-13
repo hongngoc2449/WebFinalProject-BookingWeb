@@ -1,15 +1,12 @@
 <template>
     <MainLayout>
-        <div
-            id="AddressPage" 
-            class="mt-4 max-w-[500px] mx-auto px-2"
-        >
-            <div class="mx-auto bg-white rounded-lg p-3">
-                <div class="text-xl text-bold mb-2">Address Details</div>
+        <div id="AddressPage" class="mt-8 max-w-lg mx-auto px-4">
+            <div class="mx-auto bg-white rounded-lg shadow-lg p-6 transform transition duration-500 hover:scale-105">
+                <div class="text-3xl font-bold mb-4 text-gray-800 text-center">Address Details</div>
 
-                <form @submit.prevent="submit()">
+                <form @submit.prevent="submit">
                     <TextInput 
-                        class="w-full"
+                        class="w-full mb-4 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-4 focus:ring-orange-400 focus:border-transparent"
                         placeholder="Contact Name"
                         v-model:input="contactName"
                         inputType="text"
@@ -17,7 +14,7 @@
                     />
 
                     <TextInput 
-                        class="w-full mt-2"
+                        class="w-full mb-4 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-4 focus:ring-orange-400 focus:border-transparent"
                         placeholder="Address"
                         v-model:input="address"
                         inputType="text"
@@ -25,7 +22,7 @@
                     />
 
                     <TextInput 
-                        class="w-full mt-2"
+                        class="w-full mb-4 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-4 focus:ring-orange-400 focus:border-transparent"
                         placeholder="Zip Code"
                         v-model:input="zipCode"
                         inputType="text"
@@ -33,7 +30,7 @@
                     />
 
                     <TextInput 
-                        class="w-full mt-2"
+                        class="w-full mb-4 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-4 focus:ring-orange-400 focus:border-transparent"
                         placeholder="City"
                         v-model:input="city"
                         inputType="text"
@@ -41,7 +38,7 @@
                     />
 
                     <TextInput 
-                        class="w-full mt-2"
+                        class="w-full mb-4 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-4 focus:ring-orange-400 focus:border-transparent"
                         placeholder="Country"
                         v-model:input="country"
                         inputType="text"
@@ -54,29 +51,31 @@
                         class="
                             mt-6
                             bg-gradient-to-r 
-                            from-[#FE630C] 
-                            to-[#FF3200]
+                            from-orange-400 
+                            to-orange-500
                             w-full 
                             text-white 
-                            text-[21px] 
+                            text-lg 
                             font-semibold 
-                            p-1.5 
+                            py-3 
                             rounded-full
+                            shadow-lg
+                            transition duration-300
+                            transform hover:scale-105 hover:from-orange-500 hover:to-orange-600
+                            focus:outline-none focus:ring-4 focus:ring-orange-400 focus:ring-opacity-50
+                            disabled:opacity-50
                         "
                     >
-                        <div v-if="!isWorking">Update Address</div>
+                        <span v-if="!isWorking">Update Address</span>
                         <Icon 
                             v-else
                             name="eos-icons:loading" 
                             size="25" 
-                            class="mr-2"
+                            class="animate-spin mx-auto"
                         />
                     </button>
-
                 </form>
             </div>
-
-
         </div>
     </MainLayout>
 </template>
@@ -137,5 +136,8 @@ const submit = async () => {
         return
     }
 }
-
 </script>
+
+<style scoped>
+/* Add any additional styling if needed */
+</style>
