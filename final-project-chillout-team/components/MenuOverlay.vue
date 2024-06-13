@@ -19,7 +19,7 @@
         <div class="flex items-center justify-between pt-5">
             <ul class="w-full">
                 <li 
-                    @click="goTo('orders')"
+                    @click="goTo('')"
                     class="
                         relative 
                         flex 
@@ -33,7 +33,7 @@
                 >
                     <div class=" flex items-center text-[20px] font-semibold">
                         <Icon name="ph:pen-light" size="33"/>
-                        <span class="pl-4">My Orders</span>
+                        <span class="pl-4">Homepage</span>
                     </div>
                 </li>
                 <li 
@@ -117,10 +117,11 @@ const userStore = useUserStore()
 
 // const client = useSupabaseClient()
 // const user = useSupabaseUser()
-const goTo = (url) =>{
-   userStore.isMenuOverlay = false
-   return navigateTo('/${url}') 
-}
+const goTo = (url) => {
+   userStore.isMenuOverlay = false;
+   navigateTo(`/${url}`);
+};
+
 const signOut = () => {
     client.auth.signOut()
     userStore.isMenuOverlay = false
