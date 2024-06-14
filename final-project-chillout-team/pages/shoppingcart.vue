@@ -31,12 +31,17 @@
                         <div class="text-red-500 font-bold">Welcome Deal applicable on 1 item only</div>
                     </div>
                     <div id="Items" class="bg-white rounded-lg p-4 mt-4 shadow-sm">
-                        <div v-for="product in products" :key="product.id" class="mb-4">
+                        <div v-for="product in products" :key="product.id" class="mb-4 relative">
                             <CartItem 
                                 :product="product" 
                                 :selectedArray="selectedArray"
                                 @selectedRadio="selectedRadioFunc"
                             />
+                            <div class="quantity-controls absolute bottom-4 right-4 flex items-center bg-gray-100 p-2 rounded-full shadow-md">
+                                <button @click="decreaseQuantity(product)" class="quantity-button">-</button>
+                                <span class="mx-4">{{ product.quantity }}</span>
+                                <button @click="increaseQuantity(product)" class="quantity-button">+</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -78,81 +83,125 @@
 </template>
 
 <script setup>
-import CartItem from '~/components/CartItem.vue';
-import MainLayout from '~/layouts/MainLayout.vue';
-import { useUserStore } from '~/stores/user';
-const userStore = useUserStore()
-
-let selectedArray = ref([])
-
-onMounted(() => {
-    setTimeout(() => userStore.isLoading = false, 200)
-})
-
-const cards = ref([
-    'visa.png',
-    'mastercard.png',
-    'paypal.png',
-    'applepay.png',
-])
-
-const totalPriceComputed = computed(() => {
-    let price = 0
-    userStore.cart.forEach(prod => {
-        price += prod.price
-    })
-    return (price / 100).toFixed(2)
-})
-
-const selectedRadioFunc = (e) => {
-    const index = selectedArray.value.findIndex(item => item.id === e.id)
-    if (index !== -1) {
-        selectedArray.value.splice(index, 1)
-    } else {
-        selectedArray.value.push(e)
+  import CartItem from '~/components/CartItem.vue';
+  import MainLayout from '~/layouts/MainLayout.vue';
+  import { useUserStore } from '~/stores/user';
+  const userStore = useUserStore()
+  
+  let selectedArray = ref([])
+  
+  onMounted(() => {
+      setTimeout(() => userStore.isLoading = false, 200)
+  })
+  
+  const cards = ref([
+      'visa.png',
+      'mastercard.png',
+      'paypal.png',
+      'applepay.png',
+  ])
+  
+  const totalPriceComputed = computed(() => {
+      let price = 0
+      userStore.cart.forEach(prod => {
+          price += prod.price * prod.quantity
+      })
+      return (price / 100).toFixed(2)
+  })
+  
+  const selectedRadioFunc = (e) => {
+      const index = selectedArray.value.findIndex(item => item.id === e.id)
+      if (index !== -1) {
+          selectedArray.value.splice(index, 1)
+      } else {
+          selectedArray.value.push(e)
+      }
+  }
+  
+  const goToCheckout = () => {
+      userStore.checkout = userStore.cart.filter(item => selectedArray.value.some(selected => selected.id === item.id))
+      navigateTo('/checkout')
+  }
+  
+  const products = ref([
+    {
+      id: 1,
+      title: "Parker Dining Side Chair",
+      description: "This is product 1",
+      url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200287A1792_lifestyle?$rl_enh_1x1_zoom$",
+      price: 10022,
+      quantity: 1,
+    },
+    {
+      id: 2,
+      title: "Carthage Table Lamp",
+      description: "This is product 2",
+      url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-1360415_lifestyle?$rl_enh_1x1_zoom$",
+      price: 20330,
+      quantity: 1,
+    },
+    {
+      id: 3,
+      title: "Barton Desk Lamp",
+      description: "This is product 3",
+      url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-1359301_lifestyle?$rl_enh_1x1_zoom$",
+      price: 22850,
+      quantity: 1,
+    },
+    {
+      id: 4,
+      title: "Guéridon Accent Table",
+      description: "This is product 4",
+      url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028398210197_lifestyle?$rl_enh_1x1_zoom$",
+      price: 22340,
+      quantity: 1,
     }
-}
-
-const goToCheckout = () => {
-    userStore.checkout = userStore.cart.filter(item => selectedArray.value.some(selected => selected.id === item.id))
-    navigateTo('/checkout')
-}
-
-const products = ref([
-    {
-        id: 1,
-        title: "Product 1",
-        description: "This is product 1",
-        url: "https://picsum.photos/id/1/800/800",
-        price: 1002,
-    },
-    {
-        id: 2,
-        title: "Product 2",
-        description: "This is product 2",
-        url: "https://picsum.photos/id/2/800/800",
-        price: 2030,
-    },
-    {
-        id: 3,
-        title: "Product 3",
-        description: "This is product 3",
-        url: "https://picsum.photos/id/3/800/800",
-        price: 824,
-    },
-    {
-        id: 4,
-        title: "Product 4",
-        description: "This is product 4",
-        url: "https://picsum.photos/id/4/800/800",
-        price: 223,
-    }
-])
+  ])
+  
+  const increaseQuantity = (product) => {
+      product.quantity += 1
+  }
+  
+  const decreaseQuantity = (product) => {
+      if (product.quantity > 1) {
+          product.quantity -= 1
+      }
+  }
 </script>
-
+  
 <style scoped>
-.checkout-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
+  .checkout-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .quantity-controls {
+      background-color: #f8f9fa;
+      border: 1px solid #e0e0e0;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .quantity-button {
+      background-color: #f0f0f0;
+      border: none;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.2s;
+  }
+  
+  .quantity-button:hover {
+      background-color: #e0e0e0;
+      transform: scale(1.1);
+  }
 </style>
+  
