@@ -22,13 +22,8 @@
 
                     <div id="Items" class="bg-white rounded-lg shadow p-6 flex-grow">
                         <div v-for="product in products" :key="product.id" class="mb-6 flex items-center">
-<<<<<<< HEAD
-                            <img :src="product.url" alt="product image" class="w-16 h-16 rounded mr-4"/>
-                            <div>
-=======
                             <img :src="product.url" alt="product image" class="w-20 h-20 rounded mr-4"/>
                             <div class = "items-start">
->>>>>>> task-11-update-checkout-and-address-page
                                 <div class="text-lg font-semibold">{{ product.title }}</div>
                                 <div class="text-sm text-gray-500">{{ product.description }}</div>
                                 <div class="text-lg font-bold mt-1">${{ (product.price / 100).toFixed(2) }}</div>
