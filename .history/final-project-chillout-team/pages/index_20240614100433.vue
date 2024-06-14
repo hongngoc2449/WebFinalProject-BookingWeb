@@ -71,9 +71,9 @@ const products = [
   },
   {
     id: 9,
-    title: "ohemian Bedside Table",
+    title: "Somerville Sofa",
     description: "This is product 9",
-    url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028397840170_lifestyle?$rl_enh_1x1_zoom$",
+    url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200431A2480_lifestyle?$rl_enh_1x1_zoom$",
     price: 92400,
   },
   {
