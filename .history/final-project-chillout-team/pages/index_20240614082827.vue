@@ -71,15 +71,9 @@ const products = [
   },
   {
     id: 9,
-<<<<<<< HEAD
-    title: "Somerville Sofa",
-    description: "This is product 9",
-    url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200349A1920_lifestyle?$rl_enh_1x1_dskt$",
-=======
     title: "ohemian Bedside Table",
     description: "This is product 9",
     url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028397840170_lifestyle?$rl_enh_1x1_zoom$",
->>>>>>> task-10-update-product-page-ui
     price: 92400,
   },
   {

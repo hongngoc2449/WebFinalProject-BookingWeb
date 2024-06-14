@@ -58,28 +58,17 @@
             ></path>
           </svg>
         </div>
-<<<<<<< HEAD
-        <h1 class="text-2xl my-3">{{ product.title }}</h1>
-        <p class="mb-5">{{ product.description }}</p>
-        <div class="mb-5">
-          <p>
-            <span class="text-2xl font-bold text-slate-900">${{ priceComputed }}</span>
-=======
         <h1 class="text-lg my-3">{{ product.title }}</h1>
         <p class="mb-3">{{ product.description }}</p>
         <div class="mb-3">
           <p>
             <span class="text-lg font-bold text-slate-900">${{ priceComputed }}</span>
->>>>>>> task-10-update-product-page-ui
             <span class="text-sm text-slate-900 line-through pl-1">${{ oldPriceComputed }}</span>
           </p>
         </div>
         <!-- <h2 class="font-semibold mb-5">${{ priceComputed }}</h2> -->
-<<<<<<< HEAD
-        <button class="p-2 px-6 bg-[#FD374F] text-white rounded-md hover:bg-red-600">Add To Cart</button>
-=======
         <button
-          class="flex items-center justify-center text-center mx-auto mb-2 p-2 px-10 bg-[#FD374F] text-white rounded-md hover:bg-red-600"
+          class="flex items-center justify-center text-center p-2 px-10 bg-[#FD374F] text-white rounded-md hover:bg-red-600"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -98,7 +87,6 @@
 
           Add To Cart
         </button>
->>>>>>> task-10-update-product-page-ui
       </section>
     </NuxtLink>
   </div>
