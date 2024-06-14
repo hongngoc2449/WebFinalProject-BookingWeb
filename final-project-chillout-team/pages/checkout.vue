@@ -22,8 +22,8 @@
 
                     <div id="Items" class="bg-white rounded-lg shadow p-6 flex-grow">
                         <div v-for="product in products" :key="product.id" class="mb-6 flex items-center">
-                            <img :src="product.url" alt="product image" class="w-16 h-16 rounded mr-4"/>
-                            <div>
+                            <img :src="product.url" alt="product image" class="w-20 h-20 rounded mr-4"/>
+                            <div class = "items-start">
                                 <div class="text-lg font-semibold">{{ product.title }}</div>
                                 <div class="text-sm text-gray-500">{{ product.description }}</div>
                                 <div class="text-lg font-bold mt-1">${{ (product.price / 100).toFixed(2) }}</div>
@@ -55,12 +55,14 @@
                             <div class="font-semibold">Total</div>
                             <div class="text-2xl font-semibold">$ <span class="font-extrabold">{{ (total / 100).toFixed(2) }}</span></div>
                         </div>
-                        <button class="bg-gradient-to-r from-[#FE630C] to-[#FF3200] text-white py-2 px-4 rounded-lg mt-4 w-full">Checkout</button>
+                        <button 
+                            @click="navigateTo('/success')"
+                            class="bg-gradient-to-r from-[#FE630C] to-[#FF3200] text-white py-2 px-4 rounded-lg mt-4 w-full">Checkout</button>
                     </div>
 
                     <div class="bg-white rounded-lg shadow p-6 flex-grow">
-                        <div class="text-lg font-semibold mb-4">AliExpress</div>
-                        <p class="text-sm">AliExpress keeps your information and payment safe</p>
+                        <div class="text-lg font-semibold mb-4">ChillOutExpress</div>
+                        <p class="text-sm">ChillOutExpress keeps your information and payment safe</p>
                     </div>
                 </div>
             </div>
@@ -118,24 +120,24 @@ const showError = (errorMsgText) => {
 const products = [
   {
     id: 1,
-    title: "Product 1",
-    description: "This is product 1",
-    url: "https://picsum.photos/id/1/800/800",
-    price: 1002,
+    title: "Parker Dining Side Chair",
+    description: "Made by Ralph Lauren",
+    url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200287A1792_lifestyle?$rl_enh_4x3_zoom$",
+    price: 28976,
   },
   {
     id: 2,
-    title: "Product 2",
-    description: "This is product 2",
-    url: "https://picsum.photos/id/2/800/800",
-    price: 2030,
+    title: "Carthage Table Lamp",
+    description: "Made by Hermes",
+    url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-1360415_lifestyle?$rl_enh_1x1_zoom$",
+    price: 32155,
   },
   {
     id: 3,
-    title: "Product 3",
-    description: "This is product 3",
-    url: "https://picsum.photos/id/3/800/800",
-    price: 824,
+    title: "RL-CJ Lounge Chair",
+    description: "Made by Cartier",
+    url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200304A1736_lifestyle?$rl_enh_1x1_zoom$",
+    price: 62712,
   }
 ]
 </script>
