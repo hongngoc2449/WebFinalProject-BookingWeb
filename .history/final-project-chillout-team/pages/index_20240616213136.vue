@@ -121,7 +121,7 @@ const products = [
   {
     id: 16,
     title: "Addison Club Chair",
-    description: "This is product 16",
+    description: "This is product 12",
     url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200252A2371_lifestyle?$rl_enh_1x1_zoom$",
     price: 43000,
   },

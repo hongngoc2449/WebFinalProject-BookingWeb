@@ -113,16 +113,16 @@ const products = [
   },
   {
     id: 15,
-    title: "Aldrich End Table",
-    description: "This is product 15",
-    url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028399660152_lifestyle?$rl_enh_1x1_zoom$",
+    title: "Dalton Accent Table",
+    description: "This is product 12",
+    url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028445950111_lifestyle?$rl_enh_1x1_zoom$",
     price: 76600,
   },
   {
     id: 16,
-    title: "Addison Club Chair",
-    description: "This is product 16",
-    url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200252A2371_lifestyle?$rl_enh_1x1_zoom$",
+    title: "Dalton Accent Table",
+    description: "This is product 12",
+    url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028445950111_lifestyle?$rl_enh_1x1_zoom$",
     price: 43000,
   },
 ];
