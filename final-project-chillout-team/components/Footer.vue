@@ -5,12 +5,12 @@
         <div class="mb-6 md:mb-0">
           <a href="#" class="flex items-center">
             <img src="/logo.png" class="h-16 me-3" alt="SmartShopping Logo" />
-            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Team</span>
+            <span class="self-center text-2xl font-semibold whitespace-nowrap ">Team</span>
           </a>
         </div>
         <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
           <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Company</h2>
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase ">Company</h2>
             <ul class="text-gray-500 dark:text-gray-400 font-medium">
               <li class="mb-4">
                 <a href="#" class="hover:underline">About</a>
@@ -24,7 +24,7 @@
             </ul>
           </div>
           <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Help center</h2>
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase ">Help center</h2>
             <ul class="text-gray-500 dark:text-gray-400 font-medium">
               <li class="mb-4">
                 <a href="#" class="hover:underline">Twitter</a>
@@ -38,7 +38,7 @@
             </ul>
           </div>
           <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase ">Legal</h2>
             <ul class="text-gray-500 dark:text-gray-400 font-medium">
               <li class="mb-4">
                 <a href="#" class="hover:underline">Privacy Policy</a>
