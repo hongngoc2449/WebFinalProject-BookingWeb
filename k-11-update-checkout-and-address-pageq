@@ -1,0 +1,126 @@
+*   [33mcommit 516259f7c73f94052dcefd7342a5759ab849d331[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mtask-12-change-checkout-page-and-address-page[m[33m, [m[1;31morigin/task-12-change-checkout-page-and-address-page[m[33m)[m
+[31m|[m[32m\[m  Merge: b879689 a6e15a3
+[31m|[m [32m|[m Author: Tuyen Trung Le <letrungtuyen2002@gmail.com>
+[31m|[m [32m|[m Date:   Fri Jun 14 08:52:59 2024 +0700
+[31m|[m [32m|[m 
+[31m|[m [32m|[m     fix conflict
+[31m|[m [32m|[m 
+[31m|[m * [33mcommit a6e15a3ef8025e80753f4130090227ae7db200b1[m[33m ([m[1;32mtask-11-update-checkout-and-address-page[m[33m)[m
+[31m|[m [32m|[m Author: Tuyen Trung Le <letrungtuyen2002@gmail.com>
+[31m|[m [32m|[m Date:   Fri Jun 14 08:51:19 2024 +0700
+[31m|[m [32m|[m 
+[31m|[m [32m|[m     change layout of address and checkout pages
+[31m|[m [32m|[m 
+[31m|[m * [33mcommit 8fb638143f31ac4663119723ad53d856c8fa1dd1[m[33m ([m[1;31morigin/task-11-update-checkout-and-address-page[m[33m)[m
+[31m|[m [32m|[m Author: Tuyen Trung Le <letrungtuyen2002@gmail.com>
+[31m|[m [32m|[m Date:   Thu Jun 13 23:10:56 2024 +0700
+[31m|[m [32m|[m 
+[31m|[m [32m|[m     update checkout and address page
+[31m|[m [32m|[m 
+* [32m|[m [33mcommit b8796892149f864cadb9fc58d47e90b5bae2fde1[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+[32m|[m[32m/[m  Author: Tuyen Trung Le <letrungtuyen2002@gmail.com>
+[32m|[m   Date:   Thu Jun 13 23:10:56 2024 +0700
+[32m|[m   
+[32m|[m       update checkout and address page
+[32m|[m 
+* [33mcommit 83e18ac556cabd71c7dc3b9bbfb5672d76aa739c[m
+[32m|[m Author: WilliamSimon13 <maithieutin@gmail.com>
+[32m|[m Date:   Thu Jun 13 18:17:33 2024 +0700
+[32m|[m 
+[32m|[m     update#1
+[32m|[m 
+* [33mcommit 6a8bf2f38da484e9a91769558815892365a00e92[m[33m ([m[1;31morigin/updateItempage[m[33m)[m
+[32m|[m Author: hongngocdoan <hongngoc2449@gmail.com>
+[32m|[m Date:   Thu Jun 13 17:11:32 2024 +0700
+[32m|[m 
+[32m|[m     Update UI
+[32m|[m 
+* [33mcommit ce194bd2519db4183d462a03fae3c688af2020e6[m
+[32m|[m Author: Way-curious <tuyentieple@gmail.com>
+[32m|[m Date:   Thu Jun 13 16:28:18 2024 +0700
+[32m|[m 
+[32m|[m     update ProductComponent and Product Page
+[32m|[m 
+* [33mcommit 41b6b66e122ba960d9ac9ba1c118cb18c8f2f5c2[m[33m ([m[1;32mcheckout_page_update[m[33m)[m
+[32m|[m Author: hongngocdoan <hongngoc2449@gmail.com>
+[32m|[m Date:   Tue Jun 11 15:24:36 2024 +0700
+[32m|[m 
+[32m|[m     feat #11 update MenuOverlay (Mobile Menu)
+[32m|[m 
+* [33mcommit 41637483f4d5b58f7ada604438bbf5aa3fe357a0[m
+[32m|[m Author: WilliamSimon13 <maithieutin@gmail.com>
+[32m|[m Date:   Tue Jun 11 14:21:59 2024 +0700
+[32m|[m 
+[32m|[m     feat #10 - update authentication page
+[32m|[m 
+* [33mcommit ac4dbc4ba338d9c202a79e841b3879d07cfd0a87[m
+[32m|[m Author: hongngocdoan <hongngoc2449@gmail.com>
+[32m|[m Date:   Tue Jun 11 11:07:59 2024 +0700
+[32m|[m 
+[32m|[m     chore #9 - update plan
+[32m|[m 
+* [33mcommit d4bb583878e970843f69d0c648d49e9f87fa28c0[m
+[32m|[m Author: Tuyen Trung Le <letrungtuyen2002@gmail.com>
+[32m|[m Date:   Tue Jun 11 00:28:56 2024 +0700
+[32m|[m 
+[32m|[m     feat #8 - update checkout and address pages
+[32m|[m 
+* [33mcommit 576e7d644cbfb4e7bf2c0fe6512ea7770ea981fb[m
+[32m|[m Author: hongngocdoan <hongngoc2449@gmail.com>
+[32m|[m Date:   Mon Jun 10 11:12:35 2024 +0700
+[32m|[m 
+[32m|[m     feat #7 - update shopping cart page
+[32m|[m 
+* [33mcommit 410800c005e299a4b85971cb71a5ff5fb8ae3208[m
+[32m|[m Author: hongngocdoan <hongngoc2449@gmail.com>
+[32m|[m Date:   Fri Jun 7 07:52:50 2024 +0700
+[32m|[m 
+[32m|[m     Comple Plan Folder
+[32m|[m 
+* [33mcommit 07ac60c33e7bd3c2cc3c472434d720d00b47745e[m
+[32m|[m Author: WilliamSimon13 <maithieutin@gmail.com>
+[32m|[m Date:   Thu Jun 6 18:54:46 2024 +0700
+[32m|[m 
+[32m|[m     feat #6 - update item page for single product
+[32m|[m 
+* [33mcommit 71a12b3856a0f86e92d18c208055ab9331f0c02e[m
+[32m|[m Author: Way-curious <tuyentieple@gmail.com>
+[32m|[m Date:   Thu Jun 6 14:48:06 2024 +0700
+[32m|[m 
+[32m|[m     chore #5 - update history
+[32m|[m 
+* [33mcommit 7626b9d8f8d66dcac6c30027e127a4f03ec511f4[m
+[32m|[m Author: Way-curious <tuyentieple@gmail.com>
+[32m|[m Date:   Thu Jun 6 14:46:53 2024 +0700
+[32m|[m 
+[32m|[m     feat #4 - Update product page and change footer
+[32m|[m 
+* [33mcommit c1fad04b5a4f9012043c5d83d85f5945ebd607b9[m
+[32m|[m Author: Way-curious <tuyentieple@gmail.com>
+[32m|[m Date:   Wed Jun 5 16:35:30 2024 +0700
+[32m|[m 
+[32m|[m     feat #3 - Add Loading and Footer components and set up user store with Pinia
+[32m|[m 
+* [33mcommit b300b066dc8afb4f6f063952fe4d2d7da003940c[m
+[32m|[m Author: Way-curious <tuyentieple@gmail.com>
+[32m|[m Date:   Wed Jun 5 16:14:30 2024 +0700
+[32m|[m 
+[32m|[m     feat #2 - Update MainLayout.vue with new top menu and main header
+[32m|[m 
+* [33mcommit 7869a4e111620de5119f5037755520260466c817[m
+[32m|[m Author: hongngocdoan <hongngoc2449@gmail.com>
+[32m|[m Date:   Tue Jun 4 15:30:23 2024 +0700
+[32m|[m 
+[32m|[m     Task and WireFrame
+[32m|[m 
+* [33mcommit 30a0d861e03ebe184f260e15fad5bb531dda0082[m
+[32m|[m Author: Way-curious <tuyentieple@gmail.com>
+[32m|[m Date:   Tue Jun 4 11:45:28 2024 +0700
+[32m|[m 
+[32m|[m     chore #1 - Initialize project setup
+[32m|[m 
+* [33mcommit 9f92fed3f16e00a0bacee85e421ef5383db4cb08[m
+  Author: hongngocdoan <116644838+hongngoc2449@users.noreply.github.com>
+  Date:   Tue May 28 10:57:23 2024 +0700
+  
+      Initial commit
