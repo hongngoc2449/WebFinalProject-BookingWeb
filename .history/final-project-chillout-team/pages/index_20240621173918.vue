@@ -1,7 +1,7 @@
 <template>
   <MainLayout>
     <div id="IndexPage" class="mt-4 max-w-[1200px] mx-auto px-2">
-      <section class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 gap-4">
+      <section class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 grid-cols-4 gap-4">
         <article v-if="products" v-for="product in products" :key="product.id">
           <ProductComponent3 :product="product" />
         </article>
