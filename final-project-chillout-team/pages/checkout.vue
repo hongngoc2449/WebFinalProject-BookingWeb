@@ -6,22 +6,54 @@
                 <div class="md:w-2/3 flex flex-col">
                     <div class="bg-white rounded-lg shadow p-6 mb-6 flex-grow">
                         <div class="text-2xl font-semibold mb-4">Shipping Address</div>
-                        <NuxtLink 
-                            v-if="false"
-                            to="/address"
-                            class="flex items-center pb-4 text-blue-500 hover:text-red-400"
-                        >
-                            <Icon name="+" size="18" class="mr-2"/>
-                            Update Address
-                        </NuxtLink>
-                        <div v-else class="flex items-center text-blue-500 hover:text-red-400">
-                            <Icon name="+" size="18" class="mr-2"/>
-                            <NuxtLink to="/address" class="underline">Add New Address</NuxtLink>
+                        <div v-if="currentAddress && currentAddress.data">
+                            <NuxtLink 
+                                to="/address"
+                                class="flex items-center pb-4 text-blue-500 hover:text-red-400"
+                            >
+                                <Icon name="+" size="18" class="mr-2"/>
+                                Update Address
+                            </NuxtLink>
+
+                        <div class="pt-2 border-t">
+                                <div class="underline pb-1">Delivery Address</div>
+                                <ul class="text-xs">
+                                    <li class="flex items-center gap-2">
+                                        <div>Contact name:</div> 
+                                        <div class="font-bold">{{ currentAddress.data.name }}</div>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <div>Address:</div> 
+                                        <div class="font-bold">{{ currentAddress.data.address }}</div>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <div>Zip Code:</div> 
+                                        <div class="font-bold">{{ currentAddress.data.zipcode }}</div>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <div>City:</div> 
+                                        <div class="font-bold">{{ currentAddress.data.city }}</div>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <div>Country:</div> 
+                                        <div class="font-bold">{{ currentAddress.data.country }}</div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
+                        <NuxtLink 
+                            v-else
+                            to="/address"
+                            class="flex items-center text-blue-500 hover:text-red-400"  
+                        >
+                            <Icon name="mdi:plus" size="18" class="mr-2"/>
+                            Add New Address 
+                        </NuxtLink>
+
                     </div>
 
                     <div id="Items" class="bg-white rounded-lg shadow p-6 flex-grow">
-                        <div v-for="product in products" :key="product.id" class="mb-6 flex items-center">
+                        <div v-for="product in userStore.checkout" :key="product.id" class="mb-6 flex items-center">
                             <img :src="product.url" alt="product image" class="w-20 h-20 rounded mr-4"/>
                             <div class = "items-start">
                                 <div class="text-lg font-semibold">{{ product.title }}</div>
@@ -73,6 +105,7 @@
 <script setup>
 import MainLayout from '~/layouts/MainLayout.vue';
 import { useUserStore } from '~/stores/user';
+const user = useSupabaseUser();
 const userStore = useUserStore()
 const route = useRoute()
 
@@ -87,6 +120,24 @@ let total = computed(() => subtotal.value + taxes.value + shipping.value)
 let clientSecret = null
 let currentAddress = ref(null)
 let isProcessing = ref(false)
+
+onBeforeMount(async () => {
+    if (userStore.checkout.length < 1) {
+        return navigateTo('/shoppingcart')
+    }
+
+    total.value = 0.00
+    if (user.value) {
+        currentAddress.value = await useFetch(`/api/prisma/get-address-by-user/${user.value.id}`)
+        setTimeout(() => userStore.isLoading = false, 200)
+    }
+})
+
+watchEffect(() => {
+    if (route.fullPath == '/checkout' && !user.value) {
+        return navigateTo('/auth')
+    }
+})
 
 onMounted(() => {
     isProcessing.value = true
@@ -117,29 +168,7 @@ const showError = (errorMsgText) => {
     // Show error message
 }
 
-const products = [
-  {
-    id: 1,
-    title: "Parker Dining Side Chair",
-    description: "Made by Ralph Lauren",
-    url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200287A1792_lifestyle?$rl_enh_4x3_zoom$",
-    price: 28976,
-  },
-  {
-    id: 2,
-    title: "Carthage Table Lamp",
-    description: "Made by Hermes",
-    url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-1360415_lifestyle?$rl_enh_1x1_zoom$",
-    price: 32155,
-  },
-  {
-    id: 3,
-    title: "RL-CJ Lounge Chair",
-    description: "Made by Cartier",
-    url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200304A1736_lifestyle?$rl_enh_1x1_zoom$",
-    price: 62712,
-  }
-]
+
 </script>
 
 <style>
