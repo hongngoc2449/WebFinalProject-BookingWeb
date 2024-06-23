@@ -1,7 +1,7 @@
 <template>
     <MainLayout>
         <div id="ShoppingCartPage" class="mt-4 max-w-[1200px] mx-auto px-2"> 
-            <div v-if="!products.length" class="h-[500px] flex items-center justify-center">
+            <div v-if="!userStore.cart.length" class="h-[500px] flex items-center justify-center">
                 <div class="pt-20 text-center">
                     <img
                         class="mx-auto"
@@ -24,14 +24,14 @@
                 <div class="md:w-[65%]">
                     <div class="bg-white rounded-lg p-4 shadow-sm">
                         <div class="text-2xl font-bold mb-2">
-                            Shopping Cart ({{ products.length }})
+                            Shopping Cart ({{ userStore.cart.length }})
                         </div>
                     </div>
                     <div class="bg-pink-100 rounded-lg p-4 mt-4">
                         <div class="text-red-500 font-bold">Welcome Deal applicable on 1 item only</div>
                     </div>
                     <div id="Items" class="bg-white rounded-lg p-4 mt-4 shadow-sm">
-                        <div v-for="product in products" :key="product.id" class="mb-4 relative">
+                        <div v-for="product in userStore.cart" :key="product.id" class="mb-4 relative">
                             <CartItem 
                                 :product="product" 
                                 :selectedArray="selectedArray"
@@ -87,6 +87,7 @@
   import MainLayout from '~/layouts/MainLayout.vue';
   import { useUserStore } from '~/stores/user';
   const userStore = useUserStore()
+  const user = useSupabaseUser()    
   
   let selectedArray = ref([])
   
@@ -102,12 +103,12 @@
   ])
   
   const totalPriceComputed = computed(() => {
-      let price = 0
-      userStore.cart.forEach(prod => {
-          price += prod.price * prod.quantity
-      })
-      return (price / 100).toFixed(2)
-  })
+    let price = 0
+    userStore.cart.forEach(prod => {
+        price += prod.price
+    })
+    return price / 100
+})
   
   const selectedRadioFunc = (e) => {
       const index = selectedArray.value.findIndex(item => item.id === e.id)
@@ -122,41 +123,6 @@
       userStore.checkout = userStore.cart.filter(item => selectedArray.value.some(selected => selected.id === item.id))
       navigateTo('/checkout')
   }
-  
-  const products = ref([
-    {
-      id: 1,
-      title: "Parker Dining Side Chair",
-      description: "This is product 1",
-      url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200287A1792_lifestyle?$rl_enh_1x1_zoom$",
-      price: 10022,
-      quantity: 1,
-    },
-    {
-      id: 2,
-      title: "Carthage Table Lamp",
-      description: "This is product 2",
-      url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-1360415_lifestyle?$rl_enh_1x1_zoom$",
-      price: 20330,
-      quantity: 1,
-    },
-    {
-      id: 3,
-      title: "Barton Desk Lamp",
-      description: "This is product 3",
-      url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-1359301_lifestyle?$rl_enh_1x1_zoom$",
-      price: 22850,
-      quantity: 1,
-    },
-    {
-      id: 4,
-      title: "Guéridon Accent Table",
-      description: "This is product 4",
-      url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028398210197_lifestyle?$rl_enh_1x1_zoom$",
-      price: 22340,
-      quantity: 1,
-    }
-  ])
   
   const increaseQuantity = (product) => {
       product.quantity += 1

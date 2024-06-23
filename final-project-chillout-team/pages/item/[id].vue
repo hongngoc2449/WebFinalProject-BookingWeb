@@ -7,78 +7,87 @@
                         v-if="currentImage"
                         class="rounded-lg object-fit"
                         :src="currentImage"
+                        width="500"
+                        height="400"
                     >
                     <div v-if="images[0] !== ''" class="flex items-center justify-center mt-2">
                         <div v-for="image in images">
                             <img 
                                 @mouseover="currentImage = image"
                                 @click="currentImage = image"
-                                width="70"
+                                width="80"
                                 class="rounded-md object-fit border-[3px] cursor-pointer"
                                 :class="currentImage === image ? 'border-[#FF5353]' : ''"
                                 :src="image"
+                                loading ="lazy"
                             >
                         </div>
                     </div>
                 </div>
-                <div class="md:w-[60%] bg-white p-3 rounded-lg">
+                <div class="md:w-[60%] bg-white p-4 rounded-lg shadow-md">
+
                     <div v-if="product && product.data">
-                        <p class="mb-2">{{ product.data.title }}</p>
-                        <p class="font-light text-[12px] mb-2">{{ product.data.description }}</p>
+                        <p class="text-lg font-semibold text-gray-800 mb-2">{{ product.data.title }}</p>
+                        <p class="text-sm text-gray-600 mb-2 leading-relaxed">{{ product.data.description }}</p>
                     </div>
 
-                    <div class="flex items-center pt-1.5">
-                        <span class="h-4 min-w-4 rounded-full p-0.5 bg-[#FFD000] mr-2">
-                            <Icon name="material-symbols:star-rounded" class="-mt-[17px]" size="12"/>
+                    <div class="flex items-center py-1">
+                        <span class="flex items-center justify-center w-4 h-4 rounded-full bg-yellow-400 mr-1">
+                            <Icon name="material-symbols:star-rounded" class="text-white" size="10"/>
                         </span>
-                        <p class="text-[#FF5353]">Extra 5% off</p>
+                        <p class="text-red-500 font-semibold text-xs">Extra 5% off</p>
                     </div>
 
-                    <div class="flex items-center justify-start my-2">
-                        <Icon name="ic:baseline-star" color="#FF5353"/>
-                        <Icon name="ic:baseline-star" color="#FF5353"/>
-                        <Icon name="ic:baseline-star" color="#FF5353"/>
-                        <Icon name="ic:baseline-star" color="#FF5353"/>
-                        <Icon name="ic:baseline-star" color="#FF5353"/>
-                        <span class="text-[13px] font-light ml-2">5 213 Reviews 1,000+ orders</span>
+                    <div class="flex items-center my-2">
+                        <Icon name="ic:baseline-star" color="#FF5353" size="16"/>
+                        <Icon name="ic:baseline-star" color="#FF5353" size="16"/>
+                        <Icon name="ic:baseline-star" color="#FF5353" size="16"/>
+                        <Icon name="ic:baseline-star" color="#FF5353" size="16"/>
+                        <Icon name="ic:baseline-star" color="#FF5353" size="16"/>
+                        <span class="text-xs text-gray-600 font-light ml-1">5,213 Reviews · 1,000+ orders</span>
                     </div>
 
-                    <div class="border-b" />
-
-                    <div class="flex items-center justify-start gap-2 my-2">
-                        <div class="text-xl font-bold">$ {{ priceComputed }}</div>
-                        <span class="bg-[#F5F5F5] border text-[#C08562] text-[9px] font-semibold px-1.5 rounded-sm">70% off</span>
+                    <div class="flex items-center my-2">
+                        <div class="text-lg font-bold text-gray-800">$ {{ priceComputed }}</div>
+                        <span class="bg-gray-100 border border-gray-300 text-orange-500 text-xs font-semibold px-1.5 py-1 rounded-sm ml-2">70% off</span>
                     </div>
 
-                    <p class="text-[#009A66] text-xs font-semibold pt-1">
+                    <p class="text-green-600 text-xs font-semibold my-1">
                         Free 11-day delivery over ￡8.28
                     </p>
 
-                    <p class="text-[#009A66] text-xs font-semibold pt-1">
+                    <p class="text-green-600 text-xs font-semibold my-1">
                         Free Shipping
                     </p>
 
-                    <div class="py-2"/>
+                    <p style="color: rgb(255, 255, 255);">This text is white too.</p>
 
                     <button 
                         @click="addToCart()"
                         :disabled="isInCart"
                         class="
-                            px-6 
-                            py-2 
+                            mt-3
+                            w-full
+                            px-5 
+                            py-2.5 
                             rounded-lg 
                             text-white 
-                            text-lg 
+                            text-base 
                             font-semibold 
                             bg-gradient-to-r 
-                            from-[#FF851A] 
-                            to-[#FFAC2C]
+                            from-orange-500 
+                            to-yellow-500
+                            transition-transform
+                            transform
+                            hover:scale-105
+                            disabled:opacity-50
                         "
                     >
                         <div v-if="isInCart">Is Added</div>
                         <div v-else>Add to Cart</div>
                     </button>
                 </div>
+
             </div>
         </div>
     </MainLayout>
