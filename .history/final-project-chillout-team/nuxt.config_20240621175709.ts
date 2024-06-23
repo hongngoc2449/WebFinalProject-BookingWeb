@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "@pinia-plugin-persistedstate/nuxt",
     "@nuxtjs/tailwindcss",
-    "@nuxtjs/supabase",
+    // "@nuxtjs/supabase",
   ],
   runtimeConfig: {
     public: {
@@ -16,14 +16,10 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: "Shopping Website",
+      title: 'Shopping Website',
       meta: [
-        {
-          name: "description",
-          content: "Shop the best products on ShoppingWebsite. Discover deals on electronics, fashion, home, and more.",
-        },
-      ],
-      link: [{ rel: "icon", type: "image/png", href: "/logo.png" }],
+        { name: 'description', content: 'Shop the best products on ShoppingWebsite. Discover deals on electronics, fashion, home, and more.' }
+      ]
       script: [{ src: "https://js.stripe.com/v3/", defer: true }],
     },
   },

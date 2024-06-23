@@ -76,7 +76,7 @@
             <span class="text-sm text-slate-900 line-through pl-1">${{ oldPriceComputed }}</span>
           </p>
         </div>
-
+        <!-- <h2 class="font-semibold mb-5">${{ priceComputed }}</h2> -->
         <button
           class="flex items-center justify-center text-center mx-auto mb-2 p-2 px-10 bg-[#FD374F] text-white rounded-md hover:bg-red-600"
         >
