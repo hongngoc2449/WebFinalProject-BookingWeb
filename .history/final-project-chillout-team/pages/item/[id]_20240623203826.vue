@@ -66,6 +66,8 @@
         </div>
       </div>
     </div>
+
+    <div id="description"></div>
   </MainLayout>
 </template>
 

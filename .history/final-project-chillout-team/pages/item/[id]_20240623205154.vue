@@ -22,7 +22,7 @@
         <div class="md:w-[60%] bg-white p-4 rounded-lg shadow-md">
           <div v-if="product && product.data">
             <p class="text-lg font-semibold text-gray-800 mb-2">{{ product.data.title }}</p>
-            <p class="text-sm text-gray-600 mb-2 leading-relaxed">{{ product.data.description }}</p>
+            <p class="text-sm text-gray-600 mb-2 leading-relaxed"></p>
           </div>
 
           <div class="flex items-center py-1">

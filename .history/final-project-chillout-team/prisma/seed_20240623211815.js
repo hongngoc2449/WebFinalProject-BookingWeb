@@ -173,8 +173,7 @@ async function seedProducts() {
     await prisma.products.create({
       data: {
         title: "Addison Club Chair",
-        description:
-          "The Addison Club Chair is a luxurious and inviting piece of furniture designed to provide both comfort and elegance to any living space. Typically crafted from high-quality materials such as leather or fabric upholstery, the Addison Club Chair features a plush and generously cushioned seat, backrest, and armrests, ensuring exceptional comfort and support. Its design often incorporates classic elements such as rolled arms, a deep seat, and sturdy wooden legs, which contribute to its timeless appeal and durability.",
+        description: "",
         short_description: "Artistic, Unique, Functional",
         url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200252A2371_lifestyle?$rl_enh_1x1_zoom$",
         price: 43000,
