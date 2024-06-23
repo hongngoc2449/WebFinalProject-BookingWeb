@@ -50,7 +50,7 @@ model Products {
   id          Int        @id @default(autoincrement())
   title       String
   description String
-  short_description String @default("")
+  short_description String
   url         String
   price       Int
   created_at  DateTime?  @default(now()) @db.Timestamptz(6)

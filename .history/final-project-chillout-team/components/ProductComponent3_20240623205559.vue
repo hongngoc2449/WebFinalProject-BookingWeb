@@ -69,7 +69,7 @@
         </div>
 
         <h1 class="text-lg my-3">{{ product.title }}</h1>
-        <p class="mb-3">{{ product.short_description }}</p>
+        <!-- <p class="mb-3">{{ product.description }}</p> -->
         <div class="mb-3">
           <p>
             <span class="text-lg font-bold text-slate-900">${{ priceComputed }}</span>

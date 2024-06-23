@@ -129,9 +129,7 @@ async function seedProducts() {
     await prisma.products.create({
       data: {
         title: "Dalton Accent Table",
-        description:
-          "The Dalton Accent Table is a stylish and versatile piece of furniture designed to add a touch of sophistication to any room. Typically crafted from high-quality materials such as wood, metal, or a combination of both, the Dalton Accent Table features a sturdy construction that ensures durability and longevity. Its design often includes elegant details such as turned legs, intricate carvings, or a polished finish that enhances its aesthetic appeal. The tabletop is spacious enough to hold decorative items, drinks, or books, making it a practical addition to living rooms, bedrooms, or entryways. The Dalton Accent Table's timeless charm and functional design make it a versatile choice for complementing various decor styles, from traditional to transitional or even modern interiors.",
-        short_description: "Mobile, Stylish, Functional",
+        description: "Mobile, Stylish, Functional",
         url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028445950111_lifestyle?$rl_enh_1x1_zoom$",
         price: 61220,
       },
@@ -140,9 +138,7 @@ async function seedProducts() {
     await prisma.products.create({
       data: {
         title: "Duke Bar Cart",
-        description:
-          "The Duke Bar Cart is a stylish and functional piece of furniture designed to elevate any entertaining space with its sophisticated design and practical features. Typically constructed from sturdy materials like metal or wood, the Duke Bar Cart showcases a sleek and streamlined silhouette, often with clean lines and a polished finish that adds a touch of elegance to any room.",
-        short_description: "Modern, Sleek, Functional",
+        description: "Modern, Sleek, Functional",
         url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028399794176_lifestyle?$rl_enh_1x1_zoom$",
         price: 21300,
       },
@@ -151,9 +147,7 @@ async function seedProducts() {
     await prisma.products.create({
       data: {
         title: "Duke Cocktail Table",
-        description:
-          "The Duke Cocktail Table is a sophisticated and versatile piece of furniture designed to serve as a centerpiece in any living space. Typically crafted from high-quality materials such as wood, metal, or a combination of both, the Duke Cocktail Table features a sturdy construction that ensures durability and longevity. Its design often includes a spacious tabletop, perfect for displaying decorative items, serving drinks, or holding books and magazines.",
-        short_description: "Classic, Sturdy, Elegant",
+        description: "Classic, Sturdy, Elegant",
         url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028397964181_lifestyle?$rl_enh_1x1_zoom$",
         price: 33200,
       },
@@ -162,9 +156,7 @@ async function seedProducts() {
     await prisma.products.create({
       data: {
         title: "Aldrich End Table",
-        description:
-          "The Aldrich End Table is a refined and versatile piece of furniture designed to add functionality and style to any living space. Typically crafted from high-quality materials such as wood, metal, or a blend of both, the Aldrich End Table features a sturdy construction that ensures durability and longevity. Its design often includes a compact square or rectangular tabletop, providing a convenient surface for placing lamps, decorative accents, or personal items like books and beverages.",
-        short_description: "Comfortable, Luxurious, Inviting",
+        description: "Comfortable, Luxurious, Inviting",
         url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028399660152_lifestyle?$rl_enh_1x1_zoom$",
         price: 76600,
       },
@@ -173,9 +165,7 @@ async function seedProducts() {
     await prisma.products.create({
       data: {
         title: "Addison Club Chair",
-        description:
-          "The Addison Club Chair is a luxurious and inviting piece of furniture designed to provide both comfort and elegance to any living space. Typically crafted from high-quality materials such as leather or fabric upholstery, the Addison Club Chair features a plush and generously cushioned seat, backrest, and armrests, ensuring exceptional comfort and support. Its design often incorporates classic elements such as rolled arms, a deep seat, and sturdy wooden legs, which contribute to its timeless appeal and durability.",
-        short_description: "Artistic, Unique, Functional",
+        description: "Artistic, Unique, Functional",
         url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200252A2371_lifestyle?$rl_enh_1x1_zoom$",
         price: 43000,
       },
