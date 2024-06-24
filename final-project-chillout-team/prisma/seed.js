@@ -195,7 +195,9 @@ async function seedProducts() {
       data: {
         title: "Shotwell Dresser",
         description:
+
           "This campaign-style dresser merges striking design and exquisite craftmanship, with hand-carved details and solid brass inlay complementing the rich mahogany grain. Set upon a decorative base, the four-drawer silhouette features hand-cast hardware and recessed pulls.",
+
         short_description: "Compact, Versatile, Modern",
         url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200431A2480_lifestyle?$rl_enh_1x1_zoom$",
         price: 41200,
