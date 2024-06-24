@@ -5,11 +5,12 @@ async function seedProducts() {
   try {
     const product1 = await prisma.products.create({
       data: {
-        title: "Parker Dining Side Chair",
+        title: "Hudson St. Lounge Chair",
         description:
-          "The Parker Dining Side Chair is a stylish and versatile piece designed to complement various dining room decors with its contemporary, streamlined silhouette. Crafted from sturdy wood or metal, the chair features a cushioned and upholstered seat and backrest, offering both comfort and support. Available in a range of finishes and upholstery options, it allows for easy customization to match personal preferences. Sized to fit standard dining tables, this chair also serves well in kitchens, home offices, or as an accent piece, providing a blend of elegance and functionality. Minimal assembly is typically required, ensuring a hassle-free addition to any space.",
+          "With sleek contours and triple-band arms, Ralph Lauren’s Hudson St. lounge chair embodies American modernism. Crafted from polished stainless steel, the streamlined frame is balanced with a deep cushioned seat and reclined back.",
         short_description: "Elegant, Comfortable, Stylish",
-        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200287A1792_lifestyle?$rl_enh_1x1_zoom$",
+        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200402A2310_lifestyle?$rl_enh_1x1_zoom$",
+
         price: 10022,
       },
     });
@@ -26,11 +27,13 @@ async function seedProducts() {
 
     const product2 = await prisma.products.create({
       data: {
-        title: "Carthage Table Lamp",
+
+        title: "Duke Dresser",
         description:
-          "The Barton Desk Lamp is a sleek and modern lighting solution designed to enhance productivity and style in any workspace.",
+          "The Duke dresser is inspired by 1930s-era styles and accented with polished stainless steel trim. The classic design features luxurious black glass panels at the top and has four drawers with soft-close glides.",
         short_description: "Modern, Sleek, Ambient",
-        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-1360415_lifestyle?$rl_enh_1x1_zoom$",
+        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60201336A4184_lifestyle?$rl_enh_1x1_zoom$",
+
         price: 20330,
       },
     });
@@ -48,11 +51,13 @@ async function seedProducts() {
 
     const product3 = await prisma.products.create({
       data: {
-        title: "Barton Desk Lamp",
+
+        title: "Clivedon Carved Chair",
         description:
-          "The Barton Desk Lamp is a sleek and modern lighting solution designed to enhance productivity and style in any workspace. Its design often features a streamlined, minimalist silhouette with clean lines, making it a perfect fit for contemporary or transitional decor. The lamp is typically crafted from durable materials such as metal or high-quality plastic, ensuring longevity and stability.",
+          "Ralph Lauren’s Clivedon chair showcases an exquisitely carved solid wood frame inspired by the ornate style of Louis XVI. It features an upholstered seat and back with exposed arms and is punctuated with gleaming nailhead trim.",
         short_description: "Functional, Adjustable, Contemporary",
-        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-1359301_lifestyle?$rl_enh_1x1_zoom$",
+        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200296A1830_lifestyle?$rl_enh_1x1_zoom$",
+
         price: 22850,
       },
     });
@@ -69,11 +74,13 @@ async function seedProducts() {
 
     const product4 = await prisma.products.create({
       data: {
-        title: "Guéridon Accent Table",
+
+        title: "Gavin Tray Stand",
         description:
           "The Guéridon Accent Table is a stylish and versatile piece of furniture that adds a touch of elegance to any room. Originating from French design, the Guéridon table is characterized by its small, round tabletop, supported by a central pedestal or three legs. This design often includes intricate detailing, such as carved wood or metalwork, and is available in a variety of materials like marble, glass, wood, or metal.",
         short_description: "Versatile, Chic, Durable",
-        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028398210197_lifestyle?$rl_enh_1x1_zoom$",
+        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-1031823_lifestyle?$rl_1x1_pdp$",
+
         price: 22340,
       },
     });
@@ -90,11 +97,12 @@ async function seedProducts() {
 
     const product5 = await prisma.products.create({
       data: {
-        title: "RL-CJ Lounge Chair",
+        title: "40th Anniversary Hudson St. Lounge Chair",
         description:
-          "The RL-CJ Lounge Chair is a modern and comfortable seating option designed to elevate any living space with its contemporary style and ergonomic features. This lounge chair typically showcases a sleek, streamlined design with clean lines, making it suitable for various decor styles, from minimalist to mid-century modern.",
+          "In celebration of the 40th anniversary of Ralph Lauren’s iconic Hudson St. Lounge Chair, this limited edition updates the original’s design with burnished leather—the same leather to upholster the cushioned seat and back—expertly hand-wrapped by our bespoke craftsmen in London over its triple-band steel frame. It’s finished with double topstitching and accented with a commemorative brass plaque at the crossbar.",
         short_description: "Luxurious, Cozy, Inviting",
-        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200304A1736_lifestyle?$rl_enh_1x1_zoom$",
+        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-AI60200402A015_lifestyle?$rl_enh_1x1_zoom$",
+
         price: 26274,
       },
     });
@@ -111,12 +119,14 @@ async function seedProducts() {
 
     const product6 = await prisma.products.create({
       data: {
-        title: "Sophisticated, Sturdy, Classic",
+
+        title: "Hayles Side Table",
         description:
-          "The RL-CJ Lounge Chair epitomizes a sophisticated blend of classic design and modern functionality, making it a standout piece in any living space. Crafted with a sturdy frame, often from premium wood or metal, it ensures durability and long-lasting use. The chair's classic lines and elegant silhouette evoke timeless style, while its high-density foam padding and high-quality leather or fabric upholstery offer exceptional comfort. Perfect for living rooms, reading nooks, or home offices, the RL-CJ Lounge Chair combines sophistication, sturdiness, and a classic aesthetic, making it a versatile and elegant addition to any decor.",
+          "Solid oak wood provides the foundation of the Hayles side table, which features a glass inset top framed in natural leather with expertly stitched seams. The cross-style base is embellished with a subtle step-down detail that grounds the appearance, allowing for a refined profile.",
         short_description: "Compact, Versatile, Modern",
 
-        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028446050013_lifestyle?$rl_enh_1x1_zoom$",
+        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200745A3194_lifestyle?$rl_enh_1x1_zoom$",
+
         price: 78600,
       },
     });
@@ -132,12 +142,14 @@ async function seedProducts() {
 
     const product7 = await prisma.products.create({
       data: {
-        title: "Somerville Chair",
+
+        title: "Aran Isles Chair",
         description:
-          "The Somerville Chair is a refined and versatile piece of furniture that effortlessly blends sophistication, sturdiness, and classic design elements. This chair typically features a robust wooden frame, often crafted from high-quality materials such as oak or walnut, ensuring durability and longevity. The design of the Somerville Chair is marked by its timeless elegance, with gracefully curved armrests, a high backrest, and tapered legs that add a touch of traditional charm.",
+          "Casual elegance defines the Aran Isles collection, which unites solid wood with supple aniline leather. The chair is classically styled with rolled arms, brass nail-head trim, and front-facing bun feet. Premium spring-down cushions provide the perfect balance of softness and structure to the deep, comfortable seat.",
         short_description: "Comfortable, Modern, Durable",
 
-        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200317A1624_alternate1?$rl_enh_1x1_zoom$",
+        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200261A2214_lifestyle?$rl_enh_1x1_zoom$",
+
         price: 98200,
       },
     });
@@ -153,11 +165,13 @@ async function seedProducts() {
 
     const product8 = await prisma.products.create({
       data: {
-        title: "Beekman Cocktail Table",
+
+        title: "Tourville Bed",
         description:
-          "The Beekman Cocktail Table is a sophisticated and elegant centerpiece for any living room, blending classic design with modern functionality. Typically crafted from high-quality materials such as solid wood, metal, or a combination of both, the Beekman Cocktail Table ensures durability and sturdiness. Its design often features a refined and timeless aesthetic, with clean lines, a smooth surface, and sometimes intricate detailing such as carved edges or decorative inlays.",
+          "Beautiful contours of rich khaya wood outline the Tourville bed, which offers a modern interpretation of classic French design. Set upon decorative scroll feet, the elegant silhouette is expertly upholstered at the headboard, footboard, and rails.",
         short_description: "Stylish, Practical, Elegant",
-        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028397950126_lifestyle?$rl_enh_1x1_zoom$",
+        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200292A1618_lifestyle?$rl_enh_1x1_zoom$",
+
         price: 13250,
       },
     });
@@ -173,11 +187,13 @@ async function seedProducts() {
 
     const product9 = await prisma.products.create({
       data: {
-        title: "Bohemian Bedside Table",
+
+        title: "Noble Estate Bench",
         description:
-          "The Bohemian Bedside Table embodies an eclectic and artistic flair, perfect for adding personality to any bedroom setting. Crafted with a mix of natural materials like wood, rattan, or metal, this table showcases intricate detailing such as hand-carved accents, distressed finishes, or vibrant colors that reflect its bohemian roots. It often features practical storage solutions like drawers or shelves, offering functionality alongside its distinctive design. Whether adorned with woven patterns, mosaic tiles, or unique hardware, the Bohemian Bedside Table effortlessly blends into various decor styles, from rustic and vintage to contemporary boho-chic, serving as a focal point that enhances the room's ambiance with its whimsical charm and cultural richness.",
+          "Embodying classic French elegance, the exquisitely contoured Noble Estate bench is finely crafted from solid wood with carved scrolls and cloven feet. Nailhead trim traces the graceful silhouette, uniting frame and upholstery.",
         short_description: "Artistic, Unique, Functional",
-        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028397840170_lifestyle?$rl_enh_1x1_zoom$",
+        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200345A1875_lifestyle?$rl_enh_1x1_zoom$",
+
         price: 92400,
       },
     });
@@ -195,7 +211,9 @@ async function seedProducts() {
       data: {
         title: "Shotwell Dresser",
         description:
-          "The Shotwell Dresser is a stylish and functional piece of furniture designed to enhance storage and organization in any bedroom. Typically crafted from high-quality wood such as oak, walnut, or pine, the Shotwell Dresser boasts a sturdy construction that ensures durability. Its design often features clean lines and a timeless silhouette, complemented by sleek hardware or minimalist accents for a modern touch. The dresser provides ample storage with multiple drawers of varying sizes, perfect for neatly organizing clothing, accessories, and personal items. Finished in rich stains or natural wood tones, the Shotwell Dresser seamlessly integrates into various decor styles, from contemporary to traditional, adding both elegance and practicality to the bedroom environment.",
+
+          "This campaign-style dresser merges striking design and exquisite craftmanship, with hand-carved details and solid brass inlay complementing the rich mahogany grain. Set upon a decorative base, the four-drawer silhouette features hand-cast hardware and recessed pulls.",
+
         short_description: "Compact, Versatile, Modern",
         url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200431A2480_lifestyle?$rl_enh_1x1_zoom$",
         price: 41200,
@@ -213,11 +231,13 @@ async function seedProducts() {
 
     const product11 = await prisma.products.create({
       data: {
-        title: "Nesting End Tables",
+
+        title: "Brook Street Tufted Sofa",
         description:
-          "Nesting end tables are versatile and practical furniture pieces that offer both style and functionality in modern living spaces. Typically designed as a set of two or more tables, nesting end tables feature varying sizes that fit neatly together, allowing them to be stacked or nested when not in use, thus saving space. Crafted from a variety of materials such as wood, metal, glass, or acrylic, these tables often showcase sleek and minimalist designs that blend seamlessly into contemporary decor. They are ideal for serving as side tables next to sofas or armchairs, providing convenient surfaces for lamps, books, or decorative items. Nesting end tables offer flexibility in placement, allowing them to be used together as a cohesive unit or separately throughout the room as needed. Their stylish appearance and practicality make nesting end tables a popular choice for enhancing both the aesthetic appeal and functionality of living areas.",
+          "Inspired by the tailored luxury inherent to London’s Savile Row, Ralph Lauren’s Brook Street sofa is upholstered in natural English cowhide, affording a soft hand and refined appearance. Set upon turned beechwood legs with front-facing casters, the elegant profile showcases a tufted back, scrolling arms, and gleaming nail-head trim.",
         short_description: "Chic, Functional, Sturdy",
-        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028445990059_lifestyle?$rl_enh_1x1_zoom$",
+        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200330A2471_lifestyle?$rl_enh_1x1_zoom$",
+
         price: 71200,
       },
     });
@@ -233,11 +253,13 @@ async function seedProducts() {
 
     const product12 = await prisma.products.create({
       data: {
-        title: "Dalton Accent Table",
+
+        title: "Brook Street Desk",
         description:
-          "The Dalton Accent Table is a stylish and versatile piece of furniture designed to add a touch of sophistication to any room. Typically crafted from high-quality materials such as wood, metal, or a combination of both, the Dalton Accent Table features a sturdy construction that ensures durability and longevity. Its design often includes elegant details such as turned legs, intricate carvings, or a polished finish that enhances its aesthetic appeal. The tabletop is spacious enough to hold decorative items, drinks, or books, making it a practical addition to living rooms, bedrooms, or entryways. The Dalton Accent Table's timeless charm and functional design make it a versatile choice for complementing various decor styles, from traditional to transitional or even modern interiors.",
+          "Inspired by the tailored luxury inherent to London’s Savile Row, Ralph Lauren’s interpretation of the Napoleon III desk is crafted from solid mahogany wood with a hand-applied finish. Five slender drawers and two pull-out writing shelves are set beneath the elegant buffalo leather top, which features masterfully hand-tooled silver leafing.",
         short_description: "Mobile, Stylish, Functional",
-        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028445950111_lifestyle?$rl_enh_1x1_zoom$",
+        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028398140189_lifestyle?$rl_enh_1x1_zoom$",
+
         price: 61220,
       },
     });
@@ -253,11 +275,12 @@ async function seedProducts() {
 
     const product13 = await prisma.products.create({
       data: {
-        title: "Duke Bar Cart",
+        title: "Beekman Cocktail Table",
         description:
-          "The Duke Bar Cart is a stylish and functional piece of furniture designed to elevate any entertaining space with its sophisticated design and practical features. Typically constructed from sturdy materials like metal or wood, the Duke Bar Cart showcases a sleek and streamlined silhouette, often with clean lines and a polished finish that adds a touch of elegance to any room.",
+          "The elegant silhouette of Ralph Lauren’s Beekman cocktail table is enhanced by artful hand-carved details, including an inset border motif and an intricate, lacelike apron. Set upon sculptural legs, the solid mahogany wood frame showcases a swirled grain with rich highs and lows throughout.",
         short_description: "Modern, Sleek, Functional",
-        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028399794176_lifestyle?$rl_enh_1x1_zoom$",
+        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028397950126_lifestyle?$rl_enh_1x1_zoom$",
+
         price: 21300,
       },
     });
@@ -273,34 +296,36 @@ async function seedProducts() {
 
     const product14 = await prisma.products.create({
       data: {
-        title: "Duke Cocktail Table",
+
+        title: "Writer's Chair",
         description:
-          "The Duke Cocktail Table is a sophisticated and versatile piece of furniture designed to serve as a centerpiece in any living space. Typically crafted from high-quality materials such as wood, metal, or a combination of both, the Duke Cocktail Table features a sturdy construction that ensures durability and longevity. Its design often includes a spacious tabletop, perfect for displaying decorative items, serving drinks, or holding books and magazines.",
+          "Emblematic of Ralph Lauren’s iconic and enduring style, this winged club chair is masterfully constructed with hand-done tufting, pleated roll arms, and decorative bun feet crafted from solid maple wood. Upholstered in supple English cowhide, the generous seat is trimmed in oversize brass nail-heads.",
         short_description: "Classic, Sturdy, Elegant",
-        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028397964181_lifestyle?$rl_enh_1x1_zoom$",
+        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200391A2299_lifestyle?$rl_enh_1x1_zoom$",
+
         price: 33200,
       },
     });
-
-    await prisma.products.create({
-      data: {
-        title: "Aldrich End Table",
-        description:
-          "The Aldrich End Table is a refined and versatile piece of furniture designed to add functionality and style to any living space. Typically crafted from high-quality materials such as wood, metal, or a blend of both, the Aldrich End Table features a sturdy construction that ensures durability and longevity. Its design often includes a compact square or rectangular tabletop, providing a convenient surface for placing lamps, decorative accents, or personal items like books and beverages.",
-        short_description: "Comfortable, Luxurious, Inviting",
-        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028399660152_lifestyle?$rl_enh_1x1_zoom$",
-        price: 76600,
-      },
+    await prisma.productImage.createMany({
+      data: [
+        { productId: product14.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200391A2299_alternate1?$rl_enh_1x1_zoom$" },
+        { productId: product14.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200391A2299_alternate2?$rl_enh_1x1_zoom$" },
+        { productId: product14.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200391A2299_alternate3?$rl_enh_1x1_zoom$" },
+        { productId: product14.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200391A2299_alternate4?$rl_enh_1x1_zoom$" },
+        { productId: product14.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200391A2299_alternate5?$rl_enh_1x1_zoom$" },
+      ]
     });
 
     const product15 = await prisma.products.create({
       data: {
-        title: "Addison Club Chair",
+
+        title: "Heiress End Table",
         description:
-          "The Addison Club Chair is a luxurious and inviting piece of furniture designed to provide both comfort and elegance to any living space. Typically crafted from high-quality materials such as leather or fabric upholstery, the Addison Club Chair features a plush and generously cushioned seat, backrest, and armrests, ensuring exceptional comfort and support. Its design often incorporates classic elements such as rolled arms, a deep seat, and sturdy wooden legs, which contribute to its timeless appeal and durability.",
-        short_description: "Artistic, Unique, Functional",
-        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200252A2371_lifestyle?$rl_enh_1x1_zoom$",
-        price: 43000,
+          "Regency period elegance inspires the Heiress end table, constructed with a sculptural brass frame, intricate engraved scrolls, aviary medallions, and lion’s paw feet, which are expertly cast and finished by hand. It’s topped with polished Volakas marble and features a shelf at the midpoint.",
+        short_description: "Classic, Sturdy, Elegant",
+        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028398300011_lifestyle?$rl_enh_1x1_zoom$",
+        price: 33200,
+
       },
     });
     await prisma.productImage.createMany({
@@ -315,12 +340,14 @@ async function seedProducts() {
 
     const product16 = await prisma.products.create({
       data: {
+
         title: "Desert Modern Upholstered Bed",
         description:
           "Inspired by the rustic spirit of the American West, Ralph Lauren’s Desert Modern collection highlights the beauty of natural materials with a luxurious point of view. Featuring a modern slab headboard and footboard, this bed’s tailored profile is crafted from solid wood with generous padding and hand-done upholstery.",
         short_description: "Classic, Sturdy, Elegant",
         url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200355A2020_lifestyle?$rl_enh_1x1_zoom$",
         price: 33200,
+
       },
     });
     await prisma.productImage.createMany({

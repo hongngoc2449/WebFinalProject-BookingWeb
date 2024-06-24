@@ -3,7 +3,7 @@
     <div id="ItemPage" class="mt-4 max-w-[1200px] mx-auto px-2">
       <div class="md:flex gap-6 justify-between mx-auto w-full">
         <div class="md:w-[40%]">
-          <img v-if="currentImage" class="rounded-lg object-fit" :src="currentImage" width="500" height="400" />
+          <img v-if="currentImage" class="rounded-lg object-cover" :src="currentImage" width="500" height="400" />
 
           <div
             v-if="images.length > 0"
@@ -11,12 +11,13 @@
           >
             <div v-for="image in images" :key="image">
               <img
-                @mouseover="currentImage = image"
-                @click="currentImage = image"
-                width="80"
-                class="rounded-md object-fit border-[3px] cursor-pointer"
-                :class="currentImage === image ? 'border-[#FF5353]' : ''"
-                :src="image"
+
+                @mouseover="currentImage = image.url"
+                @click="currentImage = image.url"
+                width="85"
+                class="rounded-md object-cover border-[3px] cursor-pointer"
+                :class="currentImage === image.url ? 'border-[#FF5353]' : 'border-transparent'"
+                :src="image.url"
                 loading="lazy"
               />
             </div>
@@ -52,46 +53,20 @@
               >
             </div>
 
+
             <p class="text-green-600 text-sm font-semibold my-2">Free 11-day delivery over ￡8.28</p>
             <p class="text-green-600 text-sm font-semibold my-2">Free Shipping</p>
 
+
             <p style="color: rgb(255, 255, 255)">This text is white too.</p>
           </div>
-
-          <div class="flex items-center py-1">
-            <span class="flex items-center justify-center w-4 h-4 rounded-full bg-yellow-400 mr-1">
-              <Icon name="material-symbols:star-rounded" class="text-white" size="10" />
-            </span>
-            <p class="text-red-500 font-semibold text-xs">Extra 5% off</p>
-          </div>
-
-          <div class="flex items-center my-2">
-            <Icon name="ic:baseline-star" color="#FF5353" size="16" />
-            <Icon name="ic:baseline-star" color="#FF5353" size="16" />
-            <Icon name="ic:baseline-star" color="#FF5353" size="16" />
-            <Icon name="ic:baseline-star" color="#FF5353" size="16" />
-            <Icon name="ic:baseline-star" color="#FF5353" size="16" />
-            <span class="text-xs text-gray-600 font-light ml-1">5,213 Reviews · 1,000+ orders</span>
-          </div>
-
-          <div class="flex items-center my-2">
-            <div class="text-lg font-bold text-gray-800">$ {{ priceComputed }}</div>
-            <span
-              class="bg-gray-100 border border-gray-300 text-orange-500 text-xs font-semibold px-1.5 py-1 rounded-sm ml-2"
-              >70% off</span
-            >
-          </div>
-
-          <p class="text-green-600 text-xs font-semibold my-1">Free 11-day delivery over ￡8.28</p>
-
-          <p class="text-green-600 text-xs font-semibold my-1">Free Shipping</p>
-
-          <p style="color: rgb(255, 255, 255)">This text is white too.</p>
-
+          
           <button
             @click="addToCart()"
             :disabled="isInCart"
-            class="mt-3 w-full px-5 py-2.5 rounded-lg text-white text-base font-semibold bg-gradient-to-r from-orange-500 to-yellow-500 transition-transform transform hover:scale-105 disabled:opacity-50"
+
+            class="mt-6 w-full px-6 py-3 rounded-lg text-white text-lg font-semibold bg-red-500 transition-transform transform hover:scale-105 disabled:opacity-50"
+
           >
             <div>{{ isInCart ? 'Is Added' : 'Add to Cart' }}</div>
           </button>
