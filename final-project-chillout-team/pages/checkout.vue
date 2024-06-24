@@ -7,55 +7,48 @@
                     <div class="bg-white rounded-lg shadow p-6 mb-6 flex-grow">
                         <div class="text-2xl font-semibold mb-4">Shipping Address</div>
                         <div v-if="currentAddress && currentAddress.data">
-                            <NuxtLink 
-                                to="/address"
-                                class="flex items-center pb-4 text-blue-500 hover:text-red-400"
-                            >
-                                <Icon name="+" size="18" class="mr-2"/>
+                            <NuxtLink to="/address" class="flex items-center pb-4 text-blue-500 hover:text-red-400">
+                                <Icon name="+" size="18" class="mr-2" />
                                 Update Address
                             </NuxtLink>
 
-                        <div class="pt-2 border-t">
+                            <div class="pt-2 border-t">
                                 <div class="underline pb-1">Delivery Address</div>
                                 <ul class="text-xs">
                                     <li class="flex items-center gap-2">
-                                        <div>Contact name:</div> 
+                                        <div>Contact name:</div>
                                         <div class="font-bold">{{ currentAddress.data.name }}</div>
                                     </li>
                                     <li class="flex items-center gap-2">
-                                        <div>Address:</div> 
+                                        <div>Address:</div>
                                         <div class="font-bold">{{ currentAddress.data.address }}</div>
                                     </li>
                                     <li class="flex items-center gap-2">
-                                        <div>Zip Code:</div> 
+                                        <div>Zip Code:</div>
                                         <div class="font-bold">{{ currentAddress.data.zipcode }}</div>
                                     </li>
                                     <li class="flex items-center gap-2">
-                                        <div>City:</div> 
+                                        <div>City:</div>
                                         <div class="font-bold">{{ currentAddress.data.city }}</div>
                                     </li>
                                     <li class="flex items-center gap-2">
-                                        <div>Country:</div> 
+                                        <div>Country:</div>
                                         <div class="font-bold">{{ currentAddress.data.country }}</div>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <NuxtLink 
-                            v-else
-                            to="/address"
-                            class="flex items-center text-blue-500 hover:text-red-400"  
-                        >
-                            <Icon name="mdi:plus" size="18" class="mr-2"/>
-                            Add New Address 
+                        <NuxtLink v-else to="/address" class="flex items-center text-blue-500 hover:text-red-400">
+                            <Icon name="mdi:plus" size="18" class="mr-2" />
+                            Add New Address
                         </NuxtLink>
 
                     </div>
 
                     <div id="Items" class="bg-white rounded-lg shadow p-6 flex-grow">
                         <div v-for="product in userStore.checkout" :key="product.id" class="mb-6 flex items-center">
-                            <img :src="product.url" alt="product image" class="w-20 h-20 rounded mr-4"/>
-                            <div class = "items-start">
+                            <img :src="product.url" alt="product image" class="w-20 h-20 rounded mr-4" />
+                            <div class="items-start">
                                 <div class="text-lg font-semibold">{{ product.title }}</div>
                                 <div class="text-sm text-gray-500">{{ product.description }}</div>
                                 <div class="text-lg font-bold mt-1">${{ (product.price / 100).toFixed(2) }}</div>
@@ -63,7 +56,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Right Section -->
                 <div class="md:w-1/3 flex flex-col">
                     <div id="PlaceOrder" class="bg-white rounded-lg shadow p-6 mb-6 flex-grow">
@@ -85,11 +78,12 @@
                         <div class="border-t my-4"></div>
                         <div class="flex items-center justify-between">
                             <div class="font-semibold">Total</div>
-                            <div class="text-2xl font-semibold">$ <span class="font-extrabold">{{ (total / 100).toFixed(2) }}</span></div>
+                            <div class="text-2xl font-semibold">$ <span class="font-extrabold">{{ (total /
+                                    100).toFixed(2) }}</span></div>
                         </div>
-                        <button 
-                            @click="navigateTo('/success')"
-                            class="bg-gradient-to-r from-[#FE630C] to-[#FF3200] text-white py-2 px-4 rounded-lg mt-4 w-full">Checkout</button>
+                        <button @click="navigateTo('/success')"
+                            class="bg-gradient-to-r from-[#FE630C] to-[#FF3200] text-white py-2 px-4 rounded-lg mt-4 w-full">Place
+                            Order</button>
                     </div>
 
                     <div class="bg-white rounded-lg shadow p-6 flex-grow">
@@ -177,15 +171,19 @@ const showError = (errorMsgText) => {
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
+
 .shadow {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
+
 .transition-opacity {
     transition: opacity 0.3s ease-in-out;
 }
+
 .loading-icon {
     display: none;
 }
+
 .is-processing .loading-icon {
     display: inline-block;
 }
