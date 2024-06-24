@@ -11,6 +11,7 @@
           >
             <div v-for="image in images" :key="image">
               <img
+
                 @mouseover="currentImage = image.url"
                 @click="currentImage = image.url"
                 width="85"
@@ -52,8 +53,10 @@
               >
             </div>
 
+
             <p class="text-green-600 text-sm font-semibold my-2">Free 11-day delivery over ￡8.28</p>
             <p class="text-green-600 text-sm font-semibold my-2">Free Shipping</p>
+
 
             <p style="color: rgb(255, 255, 255)">This text is white too.</p>
           </div>
@@ -61,7 +64,9 @@
           <button
             @click="addToCart()"
             :disabled="isInCart"
+
             class="mt-6 w-full px-6 py-3 rounded-lg text-white text-lg font-semibold bg-red-500 transition-transform transform hover:scale-105 disabled:opacity-50"
+
           >
             <div>{{ isInCart ? 'Is Added' : 'Add to Cart' }}</div>
           </button>
