@@ -7,7 +7,10 @@
           <div class="bg-white rounded-lg shadow p-6 mb-6 flex-grow">
             <div class="text-2xl font-semibold mb-4">Shipping Address</div>
             <div v-if="currentAddress && currentAddress.data">
-              <NuxtLink to="/address" class="flex items-center pb-4 text-blue-500 hover:text-red-400">
+              <NuxtLink
+                to="/address"
+                class="flex items-center pb-4 text-blue-500 hover:text-red-400"
+              >
                 <Icon name="+" size="18" class="mr-2" />
                 Update Address
               </NuxtLink>
@@ -44,21 +47,35 @@
                 </ul>
               </div>
             </div>
-            <NuxtLink v-else to="/address" class="flex items-center text-blue-500 hover:text-red-400">
+            <NuxtLink
+              v-else
+              to="/address"
+              class="flex items-center text-blue-500 hover:text-red-400"
+            >
               <Icon name="mdi:plus" size="18" class="mr-2" />
               Add New Address
             </NuxtLink>
           </div>
 
           <div id="Items" class="bg-white rounded-lg shadow p-6 flex-grow">
-            <div v-for="product in userStore.checkout" :key="product.id" class="mb-6 flex items-center">
-              <img :src="product.url" alt="product image" class="w-20 h-20 rounded mr-4" />
+            <div
+              v-for="product in userStore.checkout"
+              :key="product.id"
+              class="mb-6 flex items-center"
+            >
+              <img
+                :src="product.url"
+                alt="product image"
+                class="w-20 h-20 rounded mr-4"
+              />
               <div class="items-start">
                 <div class="text-lg font-semibold">{{ product.title }}</div>
                 <div class="text-sm text-gray-500">
                   {{ product.description }}
                 </div>
-                <div class="text-lg font-bold mt-1">${{ (product.price / 100).toFixed(2) }}</div>
+                <div class="text-lg font-bold mt-1">
+                  ${{ (product.price / 100).toFixed(2) }}
+                </div>
               </div>
             </div>
           </div>
@@ -66,12 +83,17 @@
 
         <!-- Right Section -->
         <div class="md:w-1/3 flex flex-col">
-          <div id="PlaceOrder" class="bg-white rounded-lg shadow p-6 mb-6 flex-grow">
+          <div
+            id="PlaceOrder"
+            class="bg-white rounded-lg shadow p-6 mb-6 flex-grow"
+          >
             <div class="text-2xl font-extrabold mb-4">Summary</div>
             <div class="space-y-2">
               <div class="flex items-center justify-between">
                 <div>Subtotal</div>
-                <div class="font-medium">$ {{ (subtotal / 100).toFixed(2) }}</div>
+                <div class="font-medium">
+                  $ {{ (subtotal / 100).toFixed(2) }}
+                </div>
               </div>
               <div class="flex items-center justify-between">
                 <div>Taxes</div>
@@ -79,7 +101,9 @@
               </div>
               <div class="flex items-center justify-between">
                 <div>Shipping</div>
-                <div class="font-medium">$ {{ (shipping / 100).toFixed(2) }}</div>
+                <div class="font-medium">
+                  $ {{ (shipping / 100).toFixed(2) }}
+                </div>
               </div>
             </div>
             <div class="border-t my-4"></div>
@@ -87,7 +111,9 @@
               <div class="font-semibold">Total</div>
               <div class="text-2xl font-semibold">
                 $
-                <span class="font-extrabold">{{ (total / 100).toFixed(2) }}</span>
+                <span class="font-extrabold">{{
+                  (total / 100).toFixed(2)
+                }}</span>
               </div>
             </div>
             <button
@@ -100,7 +126,9 @@
 
           <div class="bg-white rounded-lg shadow p-6 flex-grow">
             <div class="text-lg font-semibold mb-4">ChillOutExpress</div>
-            <p class="text-sm">ChillOutExpress keeps your information and payment safe</p>
+            <p class="text-sm">
+              ChillOutExpress keeps your information and payment safe
+            </p>
           </div>
         </div>
       </div>
@@ -133,7 +161,9 @@ onBeforeMount(async () => {
 
   total.value = 0.0;
   if (user.value) {
-    currentAddress.value = await useFetch(`/api/prisma/get-address-by-user/${user.value.id}`);
+    currentAddress.value = await useFetch(
+      `/api/prisma/get-address-by-user/${user.value.id}`
+    );
     setTimeout(() => (userStore.isLoading = false), 200);
   }
 });
@@ -229,7 +259,8 @@ const placeOrder = async () => {
 }
 
 .shadow {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 .transition-opacity {
