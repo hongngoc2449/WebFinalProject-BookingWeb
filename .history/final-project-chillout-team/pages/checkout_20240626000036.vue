@@ -152,9 +152,9 @@ onMounted(() => {
 });
 
 const placeOrder = async () => {
-  if (!user.value) {
-    return navigateTo("/auth");
-  }
+  // if (!user.value) {
+  //   return navigateTo("/auth");
+  // }
 
   try {
     if (!currentAddress.value || !currentAddress.value.data) {
