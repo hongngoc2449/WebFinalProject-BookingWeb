@@ -1,30 +1,42 @@
-import { PrismaClient } from '@prisma/client'
-const prisma = new PrismaClient()
+import { PrismaClient } from '@prisma/client';
+const prisma = new PrismaClient();
 
 export default defineEventHandler(async (event) => {
-    const body = await readBody(event)
-    
-    const order = await prisma.orders.create({
-        data: {
-            userId: body.userId,
-            stripeId: body.stripeId,
-            name: body.name,
-            address: body.address,
-            zipcode: body.zipcode,
-            city: body.city,
-            country: body.country,
+    const body = await readBody(event);
+
+    try {
+        // Kiểm tra sự tồn tại của tất cả các productId
+        const productIds = body.items.map(item => item.productId);
+        const existingProducts = await prisma.products.findMany({
+            where: { id: { in: productIds } }
+        });
+
+        if (existingProducts.length !== productIds.length) {
+            throw new Error('One or more product IDs are invalid');
         }
-    })
-    
-    body.products.forEach(async prod => {
-        await prisma.orderItem.create({
+
+        const order = await prisma.orders.create({
             data: {
-                orderId: order.id,
-                productId: Number(prod.id),
+                userId: body.userId,
+                name: body.name,
+                address: body.address,
+                zipcode: body.zipcode,
+                city: body.city,
+                country: body.country,
+                orderItem: {
+                    create: body.items.map(item => ({
+                        productId: item.productId
+                    }))
+                }
             }
-        })
-    });
+        });
 
-
-    return order
-})
+        return order;
+    } catch (error) {
+        console.error('Failed to create order:', error);
+        throw createError({
+            statusCode: 500,
+            statusMessage: 'Failed to create order'
+        });
+    }
+});

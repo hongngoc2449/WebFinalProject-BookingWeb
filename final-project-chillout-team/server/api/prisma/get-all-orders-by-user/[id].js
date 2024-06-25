@@ -1,18 +1,27 @@
-import { PrismaClient } from '@prisma/client'
-const prisma = new PrismaClient()
+import { PrismaClient } from '@prisma/client';
+const prisma = new PrismaClient();
 
 export default defineEventHandler(async (event) => {
-    let orders = await prisma.orders.findMany({
-        where: { userId: event.context.params.userId },
-        orderBy: { id: "desc" },
-        include: { 
-            orderItem: {
-                include: {
-                    product: true
+    const { userId } = getQuery(event); // Lấy userId từ query parameters
+
+    try {
+        const orders = await prisma.orders.findMany({
+            where: { userId },
+            include: { 
+                orderItem: {
+                    include: {
+                        product: true
+                    }
                 }
             }
-            
-        }
-    })
-    return orders
-})  
+        });
+
+        return orders;
+    } catch (error) {
+        console.error('Failed to fetch orders:', error);
+        throw createError({
+            statusCode: 500,
+            statusMessage: 'Failed to fetch orders'
+        });
+    }
+});
