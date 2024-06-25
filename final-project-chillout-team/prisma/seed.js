@@ -69,22 +69,22 @@ async function seedProducts() {
 
     const product4 = await prisma.products.create({
       data: {
-        title: "Gavin Tray Stand",
+        title: "Duke Bar Cart",
         description:
-          "The Guéridon Accent Table is a stylish and versatile piece of furniture that adds a touch of elegance to any room. Originating from French design, the Guéridon table is characterized by its small, round tabletop, supported by a central pedestal or three legs. This design often includes intricate detailing, such as carved wood or metalwork, and is available in a variety of materials like marble, glass, wood, or metal.",
+          "Inspired by 1930s-era designs, the Duke bar cart is accented with polished stainless steel trim and features casters for easy movement. Three shelves and an eight-bottle rack provide ample room for glassware and spirits.",
         short_description: "Versatile, Chic, Durable",
-        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-1031823_lifestyle?$rl_1x1_pdp$",
+        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028399794176_lifestyle?$rl_enh_1x1_zoom$",
         price: 22340,
       },
     });
 
     await prisma.productImage.createMany({
       data: [
-        { productId: product4.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-1031823_alternate1?$rl_1x1_zoom$" },
-        { productId: product4.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-1031823_alternate2?$rl_1x1_zoom$" },
-        { productId: product4.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028398140189_alternate10?$rl_enh_1x1_dskt$" },
-        { productId: product4.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-1031823_alternate2?$rl_1x1_zoom$" },
-        { productId: product4.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-1031823_alternate1?$rl_1x1_zoom$" },
+        { productId: product4.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028399794176_alternate1?$rl_enh_1x1_zoom$" },
+        { productId: product4.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028399794176_alternate2?$rl_enh_1x1_zoom$" },
+        { productId: product4.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028399794176_alternate4?$rl_enh_1x1_zoom$" },
+        { productId: product4.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028399794176_alternate5?$rl_enh_1x1_zoom$" },
+        { productId: product4.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028399794176_alternate6?$rl_enh_1x1_zoom$" },
       ]
     });
 
@@ -137,79 +137,77 @@ async function seedProducts() {
           "Casual elegance defines the Aran Isles collection, which unites solid wood with supple aniline leather. The chair is classically styled with rolled arms, brass nail-head trim, and front-facing bun feet. Premium spring-down cushions provide the perfect balance of softness and structure to the deep, comfortable seat.",
         short_description: "Comfortable, Modern, Durable",
 
-        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200261A2214_lifestyle?$rl_enh_1x1_zoom$",
+        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200261A2213_lifestyle?$rl_enh_1x1_dskt$",
         price: 98200,
       },
     });
     await prisma.productImage.createMany({
       data: [
-        { productId: product7.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200261A2214_alternate1?$rl_enh_1x1_zoom$" },
-        { productId: product7.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200261A2214_alternate2?$rl_enh_1x1_zoom$" },
-        { productId: product7.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200261A2214_alternate3?$rl_enh_1x1_zoom$" },
-        { productId: product7.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200261A2214_alternate4?$rl_enh_1x1_zoom$" },
-        { productId: product7.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200261A2214_alternate7?$rl_enh_1x1_zoom$" },
+        { productId: product7.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200261A2213_alternate1?$rl_enh_1x1_zoom$" },
+        { productId: product7.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200261A2213_alternate2?$rl_enh_1x1_zoom$" },
+        { productId: product7.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200261A2213_alternate3?$rl_enh_1x1_zoom$" },
+        { productId: product7.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200261A2213_alternate4?$rl_enh_1x1_zoom$" },
+        { productId: product7.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200261A2213_alternate6?$rl_enh_1x1_zoom$" },
       ]
     });
 
     const product8 = await prisma.products.create({
       data: {
-        title: "Tourville Bed",
+        title: "Duke Bar",
         description:
-          "Beautiful contours of rich khaya wood outline the Tourville bed, which offers a modern interpretation of classic French design. Set upon decorative scroll feet, the elegant silhouette is expertly upholstered at the headboard, footboard, and rails.",
+          "The Duke bar is inspired by 1930s-era styles and accented with polished stainless steel trim. It features a removable top tray, three slender drawers, a flip-down front, and flanking end doors with shelving.",
         short_description: "Stylish, Practical, Elegant",
-        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200292A1618_lifestyle?$rl_enh_1x1_zoom$",
+        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028446210034_lifestyle?$rl_enh_1x1_zoom$",
         price: 13250,
       },
     });
     await prisma.productImage.createMany({
       data: [
-        { productId: product8.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200292A1618_alternate1?$rl_enh_1x1_zoom$" },
-        { productId: product8.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200292A1618_alternate2?$rl_enh_1x1_zoom$" },
-        { productId: product8.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200292A1618_alternate4?$rl_enh_1x1_zoom$" },
-        { productId: product8.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200292A1618_alternate5?$rl_enh_1x1_zoom$" },
-        { productId: product8.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200292A1618_alternate6?$rl_enh_1x1_zoom$" },
+        { productId: product8.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028446210034_alternate3?$rl_enh_1x1_zoom$" },
+        { productId: product8.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028446210034_alternate4?$rl_enh_1x1_zoom$" },
+        { productId: product8.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028446210034_alternate8?$rl_enh_1x1_zoom$" },
+        { productId: product8.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028446210034_alternate9?$rl_enh_1x1_zoom$" },
+        { productId: product8.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028446210034_alternate11?$rl_enh_1x1_zoom$" },
       ]
     });
 
     const product9 = await prisma.products.create({
       data: {
-        title: "Noble Estate Bench",
+        title: "Côte d'Azur Bed",
         description:
-          "Embodying classic French elegance, the exquisitely contoured Noble Estate bench is finely crafted from solid wood with carved scrolls and cloven feet. Nailhead trim traces the graceful silhouette, uniting frame and upholstery.",
+          "Enveloped in supple leather upholstery, the Côte d'Azur bed is framed in solid mahogany wood and elevated upon a sloped base with polished stainless steel accents. Expertly crafted by hand, the modern profile boasts soft contours and generous padding.",
         short_description: "Artistic, Unique, Functional",
-        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200345A1875_lifestyle?$rl_enh_1x1_zoom$",
+        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200316A1785_lifestyle?$rl_enh_1x1_zoom$",
         price: 92400,
       },
     });
     await prisma.productImage.createMany({
       data: [
-        { productId: product9.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200345A1875_alternate1?$rl_enh_1x1_zoom$" },
-        { productId: product9.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200345A1875_alternate2?$rl_enh_1x1_zoom$" },
-        { productId: product9.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200345A1875_alternate3?$rl_enh_1x1_zoom$" },
-        { productId: product9.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200345A1875_alternate4?$rl_enh_1x1_zoom$" },
-        { productId: product9.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200292A1618_alternate6?$rl_enh_1x1_zoom$" },
+        { productId: product9.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200316A1785_alternate1?$rl_enh_1x1_zoom$" },
+        { productId: product9.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200316A1785_alternate2?$rl_enh_1x1_zoom$" },
+        { productId: product9.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200316A1785_alternate3?$rl_enh_1x1_zoom$" },
+        { productId: product9.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200316A1785_alternate4?$rl_enh_1x1_zoom$" },
+        { productId: product9.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200316A1785_alternate5?$rl_enh_1x1_zoom$" },
       ]
     });
 
     const product10 = await prisma.products.create({
       data: {
-        title: "Shotwell Dresser",
+        title: "Writer's Chair",
         description:
-
-          "This campaign-style dresser merges striking design and exquisite craftmanship, with hand-carved details and solid brass inlay complementing the rich mahogany grain. Set upon a decorative base, the four-drawer silhouette features hand-cast hardware and recessed pulls.",
-
-        short_description: "Compact, Versatile, Modern",
-        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200431A2480_lifestyle?$rl_enh_1x1_zoom$",
-        price: 41200,
+          "Emblematic of Ralph Lauren’s iconic and enduring style, this winged club chair is masterfully constructed with hand-done tufting, pleated roll arms, and decorative bun feet crafted from solid maple wood. Upholstered in supple English cowhide, the generous seat is trimmed in oversize brass nail-heads.",
+        short_description: "Classic, Sturdy, Elegant",
+        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200391A2299_lifestyle?$rl_enh_1x1_zoom$",
+        price: 33200,
       },
     });
     await prisma.productImage.createMany({
       data: [
-        { productId: product10.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200431A2480_alternate1?$rl_enh_1x1_zoom$" },
-        { productId: product10.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200431A2480_alternate2?$rl_enh_1x1_zoom$" },
-        { productId: product10.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200431A2480_alternate3?$rl_enh_1x1_zoom$" },
-        { productId: product10.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200431A2480_alternate4?$rl_enh_1x1_zoom$" },
-        { productId: product10.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200431A2480_alternate5?$rl_enh_1x1_zoom$" },
+        { productId: product10.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200391A2299_alternate1?$rl_enh_1x1_zoom$" },
+        { productId: product10.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200391A2299_alternate2?$rl_enh_1x1_zoom$" },
+        { productId: product10.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200391A2299_alternate3?$rl_enh_1x1_zoom$" },
+        { productId: product10.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200391A2299_alternate4?$rl_enh_1x1_zoom$" },
+        { productId: product10.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200391A2299_alternate5?$rl_enh_1x1_zoom$" },
       ]
     });
 
@@ -275,61 +273,63 @@ async function seedProducts() {
 
     const product14 = await prisma.products.create({
       data: {
-        title: "Writer's Chair",
+        title: "Shotwell Dresser",
         description:
-          "Emblematic of Ralph Lauren’s iconic and enduring style, this winged club chair is masterfully constructed with hand-done tufting, pleated roll arms, and decorative bun feet crafted from solid maple wood. Upholstered in supple English cowhide, the generous seat is trimmed in oversize brass nail-heads.",
-        short_description: "Classic, Sturdy, Elegant",
-        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200391A2299_lifestyle?$rl_enh_1x1_zoom$",
-        price: 33200,
+
+          "This campaign-style dresser merges striking design and exquisite craftmanship, with hand-carved details and solid brass inlay complementing the rich mahogany grain. Set upon a decorative base, the four-drawer silhouette features hand-cast hardware and recessed pulls.",
+
+        short_description: "Compact, Versatile, Modern",
+        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200431A2480_lifestyle?$rl_enh_1x1_zoom$",
+        price: 41200,
       },
     });
     await prisma.productImage.createMany({
       data: [
-        { productId: product14.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200391A2299_alternate1?$rl_enh_1x1_zoom$" },
-        { productId: product14.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200391A2299_alternate2?$rl_enh_1x1_zoom$" },
-        { productId: product14.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200391A2299_alternate3?$rl_enh_1x1_zoom$" },
-        { productId: product14.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200391A2299_alternate4?$rl_enh_1x1_zoom$" },
-        { productId: product14.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200391A2299_alternate5?$rl_enh_1x1_zoom$" },
+        { productId: product14.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200431A2480_alternate1?$rl_enh_1x1_zoom$" },
+        { productId: product14.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200431A2480_alternate2?$rl_enh_1x1_zoom$" },
+        { productId: product14.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200431A2480_alternate3?$rl_enh_1x1_zoom$" },
+        { productId: product14.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200431A2480_alternate4?$rl_enh_1x1_zoom$" },
+        { productId: product14.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200431A2480_alternate5?$rl_enh_1x1_zoom$" },
       ]
     });
 
     const product15 = await prisma.products.create({
       data: {
-        title: "Heiress End Table",
+        title: "Mayfair Scroll Console Table",
         description:
-          "Regency period elegance inspires the Heiress end table, constructed with a sculptural brass frame, intricate engraved scrolls, aviary medallions, and lion’s paw feet, which are expertly cast and finished by hand. It’s topped with polished Volakas marble and features a shelf at the midpoint.",
+          "Ralph Lauren’s Mayfair collection is inspired by the elegance of Mediterranean design with a hint of Old Hollywood glamour. Impeccably crafted from solid mahogany wood with a rich swirled grain, the console table is set upon a stepped platform base and showcases dual scrolling legs with intricate carvings done by hand.",
         short_description: "Classic, Sturdy, Elegant",
-        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028398300011_lifestyle?$rl_enh_1x1_zoom$",
+        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028460290035_lifestyle?$rl_enh_1x1_dskt$",
         price: 33200,
       },
     });
     await prisma.productImage.createMany({
       data: [
-        { productId: product15.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028398300011_alternate1?$rl_enh_1x1_zoom$" },
-        { productId: product15.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028398300011_alternate2?$rl_enh_1x1_zoom$" },
-        { productId: product15.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028398300011_alternate3?$rl_enh_1x1_zoom$" },
-        { productId: product15.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028398300011_alternate4?$rl_enh_1x1_zoom$" },
-        { productId: product15.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028398300011_alternate10?$rl_enh_1x1_zoom$" },
+        { productId: product15.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028460290035_alternate1?$rl_enh_1x1_zoom$" },
+        { productId: product15.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028460290035_alternate2?$rl_enh_1x1_zoom$" },
+        { productId: product15.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028460290035_alternate3?$rl_enh_1x1_zoom$" },
+        { productId: product15.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028460290035_alternate4?$rl_enh_1x1_zoom$" },
+        { productId: product15.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-6028460290035_alternate5?$rl_enh_1x1_zoom$" },
       ]
     });
 
     const product16 = await prisma.products.create({
       data: {
-        title: "Desert Modern Upholstered Bed",
+        title: "Holloway Bed",
         description:
-          "Inspired by the rustic spirit of the American West, Ralph Lauren’s Desert Modern collection highlights the beauty of natural materials with a luxurious point of view. Featuring a modern slab headboard and footboard, this bed’s tailored profile is crafted from solid wood with generous padding and hand-done upholstery.",
+          "Ralph Lauren’s Holloway bed reimagines the classic sleigh bed with a wraparound silhouette and a beautifully sloped back. Crafted from solid wood with olive ash burl wood veneers, the enveloping headboard and footboard are accented with hand-carved rosettes, while the side rails feature raised arrow detailing.",
         short_description: "Classic, Sturdy, Elegant",
-        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200355A2020_lifestyle?$rl_enh_1x1_zoom$",
+        url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60201010A3695_lifestyle?$rl_enh_1x1_zoom$",
         price: 33200,
       },
     });
     await prisma.productImage.createMany({
       data: [
-        { productId: product16.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200355A2020_alternate1?$rl_enh_1x1_zoom$" },
-        { productId: product16.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200355A2020_alternate2?$rl_enh_1x1_zoom$" },
-        { productId: product16.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200355A2020_alternate3?$rl_enh_1x1_zoom$" },
-        { productId: product16.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200355A2020_alternate4?$rl_enh_1x1_zoom$" },
-        { productId: product16.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60200355A2020_alternate5?$rl_enh_1x1_zoom$" },
+        { productId: product16.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60201010A3695_alternate1?$rl_enh_1x1_zoom$" },
+        { productId: product16.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60201010A3695_alternate2?$rl_enh_1x1_zoom$" },
+        { productId: product16.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60201010A3695_alternate3?$rl_enh_1x1_zoom$" },
+        { productId: product16.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60201010A3695_alternate4?$rl_enh_1x1_zoom$" },
+        { productId: product16.id, url: "https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-60201010A3695_alternate5?$rl_enh_1x1_zoom$" },
       ]
     });
   } catch (error) {
