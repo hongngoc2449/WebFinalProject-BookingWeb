@@ -26,15 +26,13 @@
             </div>
 
             <div class="pt-2 pb-5">
-              Delivery Address: {{ order.name }}, {{ order.address }},
-              {{ order.zipcode }}, {{ order.city }}, {{ order.country }}
+              Delivery Address: {{ order.name }}, {{ order.address }}, {{ order.zipcode }}, {{ order.city }},
+              {{ order.country }}
             </div>
           </div>
         </div>
 
-        <div v-else class="flex items-center justify-center">
-          You have no order history
-        </div>
+        <div v-else class="flex items-center justify-center">You have no order history</div>
       </div>
     </div>
   </MainLayout>
@@ -53,9 +51,7 @@ onBeforeMount(async () => {
     return navigateTo("/auth");
   }
 
-  const { data } = await useFetch(
-    `/api/prisma/get-all-orders-by-user/${user.value.id}`
-  );
+  const { data } = await useFetch(`/api/prisma/get-all-orders-by-user/${user.value.id}`);
   if (data.value) {
     orders.value = data.value;
   }
