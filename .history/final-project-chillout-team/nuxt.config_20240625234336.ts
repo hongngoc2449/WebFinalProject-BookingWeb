@@ -9,7 +9,6 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxtjs/supabase",
   ],
-
   runtimeConfig: {
     public: {
       stripePk: process.env.STRIPE_PK_KEY,
@@ -28,5 +27,6 @@ export default defineNuxtConfig({
       script: [{ src: "https://js.stripe.com/v3/", defer: true }],
     },
   },
+
   devtools: { enabled: true },
 });

@@ -16,6 +16,7 @@
     "@types/node": "^18"
   },
   "dependencies": {
+    "@mdi/font": "^7.4.47",
     "@nuxtjs/supabase": "^0.3.5",
     "@nuxtjs/tailwindcss": "^6.12.0",
     "@pinia-plugin-persistedstate/nuxt": "^1.2.0",
@@ -29,9 +30,10 @@
     "nuxt-sweetalert2": "^1.0.0",
     "pinia": "^2.1.7",
     "pinia-plugin-persistedstate": "^3.2.1",
+    "primevue": "^3.10.0",
     "prisma": "^5.15.0",
     "stripe": "^15.11.0",
-    "sweetalert2": "^11.12.0",
+    "sweetalert2": "^11.6.13",
     "vue": "^3.4.27",
     "vue-router": "^4.3.2"
   }

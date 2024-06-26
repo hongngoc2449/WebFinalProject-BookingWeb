@@ -58,10 +58,7 @@
                 <div class="text-sm text-gray-500">
                   {{ product.description }}
                 </div>
-                <div class="text-lg font-bold mt-1">
-                  ${{ (product.price / 100).toFixed(2) }}
-                  <span class="text-sm text-gray-500">x {{ product.quantity }}</span>
-                </div>
+                <div class="text-lg font-bold mt-1">${{ (product.price / 100).toFixed(2) }}</div>
               </div>
             </div>
           </div>
@@ -121,7 +118,7 @@ const user = useSupabaseUser();
 const userStore = useUserStore();
 const route = useRoute();
 
-let subtotal = ref(0);
+let subtotal = ref(0); // example value
 let taxes = ref(199); // example value
 let shipping = ref(0); // example value
 let total = computed(() => subtotal.value + taxes.value + shipping.value);
@@ -150,7 +147,7 @@ watchEffect(() => {
 onMounted(() => {
   isProcessing.value = true;
   userStore.checkout.forEach((item) => {
-    subtotal.value += item.price * item.quantity;
+    subtotal.value += item.price;
   });
 });
 
@@ -168,34 +165,44 @@ const placeOrder = async () => {
 
     const orderData = {
       userId: user.value.id,
+
       name: currentAddress.value.data.name,
+
       address: currentAddress.value.data.address,
+
       zipcode: currentAddress.value.data.zipcode,
+
       city: currentAddress.value.data.city,
+
       country: currentAddress.value.data.country,
+
       items: userStore.checkout.map((item) => ({
         productId: item.id,
-        quantity: item.quantity,
-        price: item.price,
-        total: item.total
       })),
     };
 
     await useFetch("/api/prisma/create-order", {
       method: "POST",
+
       body: JSON.stringify(orderData),
+
       headers: { "Content-Type": "application/json" },
     });
 
     isProcessing.value = false;
 
+    // Show success alert dialog
+
     Swal.fire({
       title: "Order Placed!",
       text: "Your order was successful.",
       icon: "success",
+
       showCancelButton: true,
+
       confirmButtonText: "My order",
       iconColor: "#01fa00",
+
       cancelButtonText: "Back to home",
       confirmButtonColor: "#fd374f",
       cancelButtonColor: "#858585",
@@ -208,6 +215,7 @@ const placeOrder = async () => {
     });
   } catch (error) {
     isProcessing.value = false;
+
     alert("Failed to place order");
   }
 };

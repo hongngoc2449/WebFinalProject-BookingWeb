@@ -7,7 +7,10 @@
           <div class="bg-white rounded-lg shadow p-6 mb-6 flex-grow">
             <div class="text-2xl font-semibold mb-4">Shipping Address</div>
             <div v-if="currentAddress && currentAddress.data">
-              <NuxtLink to="/address" class="flex items-center pb-4 text-blue-500 hover:text-red-400">
+              <NuxtLink
+                to="/address"
+                class="flex items-center pb-4 text-blue-500 hover:text-red-400"
+              >
                 <Icon name="+" size="18" class="mr-2" />
                 Update Address
               </NuxtLink>
@@ -44,15 +47,27 @@
                 </ul>
               </div>
             </div>
-            <NuxtLink v-else to="/address" class="flex items-center text-blue-500 hover:text-red-400">
+            <NuxtLink
+              v-else
+              to="/address"
+              class="flex items-center text-blue-500 hover:text-red-400"
+            >
               <Icon name="mdi:plus" size="18" class="mr-2" />
               Add New Address
             </NuxtLink>
           </div>
 
           <div id="Items" class="bg-white rounded-lg shadow p-6 flex-grow">
-            <div v-for="product in userStore.checkout" :key="product.id" class="mb-6 flex items-center">
-              <img :src="product.url" alt="product image" class="w-20 h-20 rounded mr-4" />
+            <div
+              v-for="product in userStore.checkout"
+              :key="product.id"
+              class="mb-6 flex items-center"
+            >
+              <img
+                :src="product.url"
+                alt="product image"
+                class="w-20 h-20 rounded mr-4"
+              />
               <div class="items-start">
                 <div class="text-lg font-semibold">{{ product.title }}</div>
                 <div class="text-sm text-gray-500">
@@ -60,7 +75,6 @@
                 </div>
                 <div class="text-lg font-bold mt-1">
                   ${{ (product.price / 100).toFixed(2) }}
-                  <span class="text-sm text-gray-500">x {{ product.quantity }}</span>
                 </div>
               </div>
             </div>
@@ -69,12 +83,17 @@
 
         <!-- Right Section -->
         <div class="md:w-1/3 flex flex-col">
-          <div id="PlaceOrder" class="bg-white rounded-lg shadow p-6 mb-6 flex-grow">
+          <div
+            id="PlaceOrder"
+            class="bg-white rounded-lg shadow p-6 mb-6 flex-grow"
+          >
             <div class="text-2xl font-extrabold mb-4">Summary</div>
             <div class="space-y-2">
               <div class="flex items-center justify-between">
                 <div>Subtotal</div>
-                <div class="font-medium">$ {{ (subtotal / 100).toFixed(2) }}</div>
+                <div class="font-medium">
+                  $ {{ (subtotal / 100).toFixed(2) }}
+                </div>
               </div>
               <div class="flex items-center justify-between">
                 <div>Taxes</div>
@@ -82,7 +101,9 @@
               </div>
               <div class="flex items-center justify-between">
                 <div>Shipping</div>
-                <div class="font-medium">$ {{ (shipping / 100).toFixed(2) }}</div>
+                <div class="font-medium">
+                  $ {{ (shipping / 100).toFixed(2) }}
+                </div>
               </div>
             </div>
             <div class="border-t my-4"></div>
@@ -90,7 +111,9 @@
               <div class="font-semibold">Total</div>
               <div class="text-2xl font-semibold">
                 $
-                <span class="font-extrabold">{{ (total / 100).toFixed(2) }}</span>
+                <span class="font-extrabold">{{
+                  (total / 100).toFixed(2)
+                }}</span>
               </div>
             </div>
             <button
@@ -103,7 +126,9 @@
 
           <div class="bg-white rounded-lg shadow p-6 flex-grow">
             <div class="text-lg font-semibold mb-4">ChillOutExpress</div>
-            <p class="text-sm">ChillOutExpress keeps your information and payment safe</p>
+            <p class="text-sm">
+              ChillOutExpress keeps your information and payment safe
+            </p>
           </div>
         </div>
       </div>
@@ -121,7 +146,7 @@ const user = useSupabaseUser();
 const userStore = useUserStore();
 const route = useRoute();
 
-let subtotal = ref(0);
+let subtotal = ref(0); // example value
 let taxes = ref(199); // example value
 let shipping = ref(0); // example value
 let total = computed(() => subtotal.value + taxes.value + shipping.value);
@@ -136,7 +161,9 @@ onBeforeMount(async () => {
 
   total.value = 0.0;
   if (user.value) {
-    currentAddress.value = await useFetch(`/api/prisma/get-address-by-user/${user.value.id}`);
+    currentAddress.value = await useFetch(
+      `/api/prisma/get-address-by-user/${user.value.id}`
+    );
     setTimeout(() => (userStore.isLoading = false), 200);
   }
 });
@@ -150,7 +177,7 @@ watchEffect(() => {
 onMounted(() => {
   isProcessing.value = true;
   userStore.checkout.forEach((item) => {
-    subtotal.value += item.price * item.quantity;
+    subtotal.value += item.price;
   });
 });
 
@@ -168,34 +195,44 @@ const placeOrder = async () => {
 
     const orderData = {
       userId: user.value.id,
+
       name: currentAddress.value.data.name,
+
       address: currentAddress.value.data.address,
+
       zipcode: currentAddress.value.data.zipcode,
+
       city: currentAddress.value.data.city,
+
       country: currentAddress.value.data.country,
+
       items: userStore.checkout.map((item) => ({
         productId: item.id,
-        quantity: item.quantity,
-        price: item.price,
-        total: item.total
       })),
     };
 
     await useFetch("/api/prisma/create-order", {
       method: "POST",
+
       body: JSON.stringify(orderData),
+
       headers: { "Content-Type": "application/json" },
     });
 
     isProcessing.value = false;
 
+    // Show success alert dialog
+
     Swal.fire({
       title: "Order Placed!",
       text: "Your order was successful.",
       icon: "success",
+
       showCancelButton: true,
+
       confirmButtonText: "My order",
       iconColor: "#01fa00",
+
       cancelButtonText: "Back to home",
       confirmButtonColor: "#fd374f",
       cancelButtonColor: "#858585",
@@ -208,6 +245,7 @@ const placeOrder = async () => {
     });
   } catch (error) {
     isProcessing.value = false;
+
     alert("Failed to place order");
   }
 };
@@ -221,7 +259,8 @@ const placeOrder = async () => {
 }
 
 .shadow {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 .transition-opacity {

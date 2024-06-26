@@ -8,13 +8,34 @@ export default defineNuxtConfig({
     "@pinia-plugin-persistedstate/nuxt",
     "@nuxtjs/tailwindcss",
     "@nuxtjs/supabase",
+    "vuetify-nuxt-module",
   ],
-
+  vuetify: {
+    moduleOptions: {
+      /* module specific options */
+    },
+    vuetifyOptions: {
+      theme: {
+        themes: {
+          light: {
+            primary: "#1976D2",
+            secondary: "#424242",
+            accent: "#82B1FF",
+            error: "#FF5252",
+            info: "#2196F3",
+            success: "#4CAF50",
+            warning: "#FFC107",
+          },
+        },
+      },
+    },
+  },
   runtimeConfig: {
     public: {
       stripePk: process.env.STRIPE_PK_KEY,
     },
   },
+
   app: {
     head: {
       title: "Shopping Website",
@@ -28,5 +49,6 @@ export default defineNuxtConfig({
       script: [{ src: "https://js.stripe.com/v3/", defer: true }],
     },
   },
+
   devtools: { enabled: true },
 });

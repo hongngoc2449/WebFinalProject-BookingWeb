@@ -8,13 +8,14 @@ export default defineNuxtConfig({
     "@pinia-plugin-persistedstate/nuxt",
     "@nuxtjs/tailwindcss",
     "@nuxtjs/supabase",
+    "@nuxtjs/vuetify",
   ],
-
   runtimeConfig: {
     public: {
       stripePk: process.env.STRIPE_PK_KEY,
     },
   },
+
   app: {
     head: {
       title: "Shopping Website",
@@ -28,5 +29,6 @@ export default defineNuxtConfig({
       script: [{ src: "https://js.stripe.com/v3/", defer: true }],
     },
   },
+
   devtools: { enabled: true },
 });
