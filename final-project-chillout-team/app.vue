@@ -36,11 +36,9 @@ onMounted(() => {
   window.addEventListener("resize", () => {
     windowWidth.value = window.innerWidth;
   });
-
-  // Simulate loading completion
   setTimeout(() => {
     userStore.isLoading = false;
-  }, 2000); // Adjust this timeout as needed
+  }, 2000);
 });
 
 watch(
