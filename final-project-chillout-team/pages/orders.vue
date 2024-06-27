@@ -8,7 +8,11 @@
         </div>
 
         <div v-if="orders && orders.length > 0" class="space-y-6">
-          <div v-for="order in orders" :key="order.id" class="border rounded-lg p-4 bg-gray-50 shadow-sm">
+          <div
+            v-for="order in orders"
+            :key="order.id"
+            class="border rounded-lg p-4 bg-gray-50 shadow-sm"
+          >
             <p class="text-lg font-medium">
               Order ID: <span class="text-gray-700">{{ order.id }}</span>
             </p>
@@ -19,8 +23,16 @@
                 :key="item.id"
                 class="flex items-center gap-4 p-2 bg-white rounded-lg shadow-sm"
               >
-                <img width="60" class="rounded-lg" :src="item.product.url" alt="Product Image" />
-                <NuxtLink class="hover:underline hover:text-blue-600" :to="`/item/${item.productId}`">
+                <img
+                  width="60"
+                  class="rounded-lg"
+                  :src="item.product.url"
+                  alt="Product Image"
+                />
+                <NuxtLink
+                  class="hover:underline hover:text-blue-600"
+                  :to="`/item/${item.productId}`"
+                >
                   <p class="text-lg text-gray-800">{{ item.product.title }}</p>
                 </NuxtLink>
               </div>
@@ -28,7 +40,10 @@
 
             <div class="mt-4 text-sm text-gray-600">
               <p class="font-semibold">Delivery Address:</p>
-              <p>{{ order.name }}, {{ order.address }}, {{ order.zipcode }}, {{ order.city }}, {{ order.country }}</p>
+              <p>
+                {{ order.name }}, {{ order.address }}, {{ order.zipcode }},
+                {{ order.city }}, {{ order.country }}
+              </p>
             </div>
           </div>
         </div>
@@ -54,7 +69,9 @@ onBeforeMount(async () => {
     return navigateTo("/auth");
   }
 
-  const { data } = await useFetch(`/api/prisma/get-all-orders-by-user/${user.value.id}`);
+  const { data } = await useFetch(
+    `/api/prisma/get-all-orders-by-user/${user.value.id}`
+  );
   if (data.value) {
     orders.value = data.value;
   }

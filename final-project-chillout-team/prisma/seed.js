@@ -90,7 +90,7 @@ async function seedProducts() {
 
     const product5 = await prisma.products.create({
       data: {
-        title: "40th Anniversary Hudson St. Lounge Chair",
+        title: "40th Hudson St. Lounge Chair",
         description:
           "In celebration of the 40th anniversary of Ralph Lauren’s iconic Hudson St. Lounge Chair, this limited edition updates the original’s design with burnished leather—the same leather to upholster the cushioned seat and back—expertly hand-wrapped by our bespoke craftsmen in London over its triple-band steel frame. It’s finished with double topstitching and accented with a commemorative brass plaque at the crossbar.",
         short_description: "Luxurious, Cozy, Inviting",
