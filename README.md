@@ -27,7 +27,7 @@ https://chilloutwebsite.netlify.app
 
 - [Wireframe](./WireFrame/Readme.md)
 - [Planning](./Planning/README.md)
-- [ERD Diagram](./Planning/README.md)
+- [ERD Diagram](./Database_Description/DATABASE_DESCRIPTION.md)
 - [ScreenShot](./Screenshot/README.md)
 
 ## Prerequisites
