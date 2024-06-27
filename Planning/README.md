@@ -50,49 +50,48 @@
 | Shopping Cart Page           | Hong Ngoc   | Design the UI of the Shopping Cart Page. | June 08  | Finished |
 
 
-### Sprint 5: Checkout and Address Pages (June 9 - June 11)
+### Sprint 5: Checkout and Address Pages (June 9 - June 15)
 
 
 | Task                | Assigned To      | Details                             | Deadline          | Status   |
 | ------------------- | ---------------- | ----------------------------------- | ----------------- | -------- |
 | Update Project Plan | All Team Members | Review and update the project plan. | June 11 - 2 hours | Finished |
-| Checkout Page       | Trung Tuyen      | Design the UI of the Checkout Page. | June 12           | Finished |
-| Address Page        | Trung Tuyen      | Design the UI of the Address Page.  | June 12           | Finished |
+| Checkout Page       | Trung Tuyen      | Design the UI of the Checkout Page. | June 14           | Finished |
+| Address Page        | Trung Tuyen      | Design the UI of the Address Page.  | June 15           | Finished |
 
 
-### Sprint 6: Authentication and Success Pages (June 11 - June 13)
+### Sprint 6: Authentication and Success Pages (June 15 - June 18)
 
 
 | Task         | Assigned To | Details                            | Deadline | Status      |
 | ------------ | ----------- | ---------------------------------- | -------- | ----------- |
-| Auth Page    | Thieu Tin   | Design the UI of the Auth Page.    | June 11  | in progress |
-| Success Page | Hong Ngoc   | Design the UI of the Success Page. | June 13  | in progress |
+| Auth Page    | Thieu Tin   | Design the UI of the Auth Page.    | June 16  | Finished |
+| Success Page | Hong Ngoc   | Design the UI of the Success Page. | June 17  | Finished |
 
 
-### Sprint 7: Backend Setup (June 13 - June 18)
+### Sprint 7: Backend Setup (June 19 - June 22)
 
 
 | Task           | Assigned To | Details                    | Deadline | Status  |
 | -------------- | ----------- | -------------------------- | -------- | ------- |
-| Apply API      | Hong Ngoc   | Implement API integration. | June 15  | Holding |
-| Apply Database | Tiep Tuyen  | Set up the database.       | June 18  | Holding |
+| Apply API      | Hong Ngoc   | Implement API integration. | June 20  | Finished |
+| Apply Database | Tiep Tuyen  | Set up the database.       | June 21  | Finished |
+
+### Sprint 8: Order Page (June 25)
 
 
-### Sprint 8: Stripe Integration (June 18 - June 20)
+| Task           | Assigned To | Details                    | Deadline | Status  |
+| -------------- | ----------- | -------------------------- | -------- | ------- |
+| Order page | Tiep Tuyen  | Crate the Order Page       | June 25  | Finished |
 
 
-| Task         | Assigned To | Details                                  | Deadline | Status  |
-| ------------ | ----------- | ---------------------------------------- | -------- | ------- |
-| Stripe Setup | Thieu Tin   | Integrate Stripe for payment processing. | June 18  | Holding |
-
-
-### Sprint 9: Testing and Final Touches (June 20 - June 23)
+### Sprint 9: Testing and Final Touches (June 23 - June 27)
 
 
 | Task                                                | Assigned To      | Details                                                                      | Deadline | Status  |
 | --------------------------------------------------- | ---------------- | ---------------------------------------------------------------------------- | -------- | ------- |
-| Test Web Performance, Functionality, and Fix Issues | All Team Members | Test the website's performance and functionality. Fix any identified issues. | June 19  | Holding |
-| UI Upgrade                                          | Hong Ngoc        | Make final UI improvements.                                                  | June 20  | Holding |
+| Test Web Performance, Functionality, and Fix Issues | All Team Members | Test the website's performance and functionality. Fix any identified issues. | June 23 - 27  | Finished |
+| UI Upgrade                                          | Hong Ngoc        | Make final UI improvements.                                                  | June 26  | Finished |
 
 
 ## Project Management
