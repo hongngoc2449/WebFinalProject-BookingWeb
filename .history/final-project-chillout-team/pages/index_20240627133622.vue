@@ -16,7 +16,6 @@ import { useUserStore } from "~/stores/user";
 const userStore = useUserStore();
 
 let products = ref(null);
-
 onBeforeMount(async () => {
   try {
     products.value = await useFetch("/api/prisma/get-all-products");

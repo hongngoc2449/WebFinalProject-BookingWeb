@@ -60,15 +60,22 @@ const isPageLoadedSuccess = () => {
   });
 };
 
-const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-
 onMounted(async () => {
+  // userStore.isLoading = true;
+  // window.addEventListener("resize", () => {
+  //   windowWidth.value = window.innerWidth;
+  // });
+
+  // // Simulate loading completion
+  // setTimeout(() => {
+  //   userStore.isLoading = false;
+  // }, 2000); // Adjust this timeout as needed
+
   window.addEventListener("resize", () => {
     windowWidth.value = window.innerWidth;
   });
 
   userStore.isLoading = true;
-  await delay(500); // Ensuring the isLoading state is updated
   await isPageLoadedSuccess();
   userStore.isLoading = false;
 });
@@ -85,8 +92,11 @@ watch(
 watch(
   () => route.fullPath,
   async () => {
+    // userStore.isLoading = true;
+    // setTimeout(() => {
+    //   userStore.isLoading = false;
+    // }, 1700);
     userStore.isLoading = true;
-    await delay(500); // Ensuring the isLoading state is updated
     await isPageLoadedSuccess();
     userStore.isLoading = false;
   }

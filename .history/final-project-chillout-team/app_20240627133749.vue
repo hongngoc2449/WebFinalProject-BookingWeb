@@ -39,38 +39,16 @@ const userStore = useUserStore();
 const route = useRoute();
 let windowWidth = ref(process.client ? window.innerWidth : 0);
 
-const isPageLoadedSuccess = () => {
-  return new Promise((resolve) => {
-    const checkReadyState = () => {
-      if (document.readyState === "complete") {
-        if (window.jQuery) {
-          if (window.jQuery.active === 0) {
-            resolve(true);
-          } else {
-            setTimeout(checkReadyState, 100);
-          }
-        } else {
-          resolve(true);
-        }
-      } else {
-        setTimeout(checkReadyState, 100);
-      }
-    };
-    checkReadyState();
-  });
-};
-
-const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-
-onMounted(async () => {
+onMounted(() => {
+  userStore.isLoading = true;
   window.addEventListener("resize", () => {
     windowWidth.value = window.innerWidth;
   });
 
-  userStore.isLoading = true;
-  await delay(500); // Ensuring the isLoading state is updated
-  await isPageLoadedSuccess();
-  userStore.isLoading = false;
+  // Simulate loading completion
+  // setTimeout(() => {
+  //   userStore.isLoading = false;
+  // }, 2000); // Adjust this timeout as needed
 });
 
 watch(
@@ -84,11 +62,11 @@ watch(
 
 watch(
   () => route.fullPath,
-  async () => {
+  () => {
     userStore.isLoading = true;
-    await delay(500); // Ensuring the isLoading state is updated
-    await isPageLoadedSuccess();
-    userStore.isLoading = false;
+    setTimeout(() => {
+      userStore.isLoading = false;
+    }, 1700);
   }
 );
 </script>

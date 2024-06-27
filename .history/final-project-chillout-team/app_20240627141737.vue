@@ -68,7 +68,8 @@ onMounted(async () => {
   });
 
   userStore.isLoading = true;
-  await delay(500); // Ensuring the isLoading state is updated
+  await delay(500);
+  d;
   await isPageLoadedSuccess();
   userStore.isLoading = false;
 });
@@ -86,7 +87,7 @@ watch(
   () => route.fullPath,
   async () => {
     userStore.isLoading = true;
-    await delay(500); // Ensuring the isLoading state is updated
+    await delay(500);
     await isPageLoadedSuccess();
     userStore.isLoading = false;
   }
