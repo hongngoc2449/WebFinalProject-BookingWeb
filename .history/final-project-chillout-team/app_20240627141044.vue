@@ -60,15 +60,12 @@ const isPageLoadedSuccess = () => {
   });
 };
 
-const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-
 onMounted(async () => {
   window.addEventListener("resize", () => {
     windowWidth.value = window.innerWidth;
   });
 
   userStore.isLoading = true;
-  await delay(500); // Ensuring the isLoading state is updated
   await isPageLoadedSuccess();
   userStore.isLoading = false;
 });
@@ -86,7 +83,6 @@ watch(
   () => route.fullPath,
   async () => {
     userStore.isLoading = true;
-    await delay(500); // Ensuring the isLoading state is updated
     await isPageLoadedSuccess();
     userStore.isLoading = false;
   }

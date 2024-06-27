@@ -17,6 +17,18 @@ const userStore = useUserStore();
 
 let products = ref(null);
 
+onMounted(() => {
+  // userStore.isLoading = true;
+  window.addEventListener("resize", () => {
+    windowWidth.value = window.innerWidth;
+  });
+
+  // Simulate loading completion
+  setTimeout(() => {
+    userStore.isLoading = false;
+  }, 2000); // Adjust this timeout as needed
+});
+
 onBeforeMount(async () => {
   try {
     products.value = await useFetch("/api/prisma/get-all-products");

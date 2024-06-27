@@ -38,7 +38,6 @@ import { useRoute } from "vue-router";
 const userStore = useUserStore();
 const route = useRoute();
 let windowWidth = ref(process.client ? window.innerWidth : 0);
-
 const isPageLoadedSuccess = () => {
   return new Promise((resolve) => {
     const checkReadyState = () => {
@@ -59,18 +58,16 @@ const isPageLoadedSuccess = () => {
     checkReadyState();
   });
 };
-
-const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-
-onMounted(async () => {
+onMounted(() => {
+  // userStore.isLoading = true;
   window.addEventListener("resize", () => {
     windowWidth.value = window.innerWidth;
   });
 
-  userStore.isLoading = true;
-  await delay(500); // Ensuring the isLoading state is updated
-  await isPageLoadedSuccess();
-  userStore.isLoading = false;
+  // Simulate loading completion
+  setTimeout(() => {
+    userStore.isLoading = false;
+  }, 2000); // Adjust this timeout as needed
 });
 
 watch(
@@ -84,11 +81,11 @@ watch(
 
 watch(
   () => route.fullPath,
-  async () => {
+  () => {
     userStore.isLoading = true;
-    await delay(500); // Ensuring the isLoading state is updated
-    await isPageLoadedSuccess();
-    userStore.isLoading = false;
+    setTimeout(() => {
+      userStore.isLoading = false;
+    }, 1700);
   }
 );
 </script>
