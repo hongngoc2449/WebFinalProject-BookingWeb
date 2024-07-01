@@ -29,6 +29,7 @@ https://chilloutwebsite.netlify.app
 - [Planning](./Planning/README.md)
 - [ERD Diagram](./Database_Description/DATABASE_DESCRIPTION.md)
 - [ScreenShot](./Screenshot/README.md)
+- [Video](./Video/ReviewVideo.mp4)
 
 ## Prerequisites
 
