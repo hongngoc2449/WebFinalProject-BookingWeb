@@ -1,14 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Product;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/api/products', function () {
-    return response()->json([
-        ['id' => 1, 'name' => 'Product 1', 'price' => 100],
-        ['id' => 2, 'name' => 'Product 2', 'price' => 200],
-    ]);
+Route::get('/products', function () {
+    return Product::all(); // Lấy tất cả sản phẩm bằng Eloquent
 });
